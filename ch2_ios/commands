@@ -1,0 +1,464 @@
+    1  newgrp docker
+    2  python3 --version
+    3  apt-add-repository ppa:ansible/ansible
+    4  apt-get update
+    5  apt-get install ansible
+    6  ansible --version
+    7  ansible -m ping localhost
+    8  ifconfig
+    9  apt install net-tools
+   10  apt-get install python3-pip
+   11  cd ansible
+   12  mkdir  ansible && cd ansible
+   13  mkdir ch1_ansible
+   14  ls
+   15  cd ch1_ansible
+   16  touch hosts
+   17  nano hosts
+   18  mkdir group_vars host_vars
+   19  touch group_vars/cisco.yml group_vars/juniper.yml
+   20  touch host_vars/csr1.yml host_vars/mx1.yml
+   21  echo 'hostname: core-mx1' >> host_vars/mx1.yml
+   22  nano hosts
+   23  echo 'hostname: core-mx2' >> host_vars/mx2.yml
+   24  echo 'hostname: edge-csr1' >> host_vars/csr1.yml
+   25  echo 'hostname: edge-csr2' >> host_vars/csr2.yml
+   26  echo 'os: ios' >> group_vars/cisco.yml
+   27  echo 'os: junos' >> group_vars/juniper.yml
+   28  tree
+   29  apt  install tree
+   30  tree
+   31  shutdown now
+   32  ifconfig
+   33  ifconfig -a | grep eth
+   34  ifconfig -a
+   35  ls /etc/netplan
+   36  nano /etc/netplan/00-installer-config.yaml 
+   37  netplan apply
+   38  nano /etc/netplan/00-installer-config.yaml 
+   39  ip addr
+   40  ifup ens37
+   41  apt install ifupdown
+   42  ifup ens37
+   43  ip addr
+   44  reboot
+   45  nano /etc/netplan/00-installer-config.yaml 
+   46  netplan apply
+   47  ip addr
+   48  ifup ens37
+   49  sudo ip addr add 192.168.198.129/24 dev ens37
+   50  ip link set dev ens37 up
+   51  ifconfig
+   52  ip route show
+   53  nano /etc/netplan/00-installer-config.yaml 
+   54  netplan apply
+   55  ip route show
+   56  ifconfig
+   57  ping 192.169.198.1
+   58  ping 192.168.198.1
+   59  history 
+   60  ansible -m ping 192.168.198.131
+   61  nano /etc/ansible/hosts
+   62  cd ansible/ch1_ansible/
+   63  ls
+   64  nano host
+   65  nano hosts
+   66  ansible -m ping -i hosts
+   67  ansible -i hosts  -m ping
+   68  ansible all -i hosts --module-name ping
+   69  cat playbook.yml
+   70  nano  playbook.yml
+   71  nano hosts
+   72  ansible all -i hosts --module-name ping
+   73  ansible-playbook -i hosts playbook.yml
+   74  nano hosts
+   75  ls
+   76  cd group_vars/
+   77  ls
+   78  nano cisco.yml 
+   79  cd .
+   80  cd ..
+   81  cd host_vars/
+   82  ls
+   83  nano csr1.yml 
+   84  touch host_vars/r1.yml
+   85  cd..
+   86  cd ..
+   87  touch host_vars/r1.yml
+   88  echo 'hostname: edge-r1' >> host_vars/r1.yml
+   89  ansible-playbook -i hosts playbook.yml
+   90  nano ansible_cond.yml
+   91  ansible-playbook -i hosts ansible_cond.yml
+   92  nano ansible_cond.yml
+   93  ansible-playbook -i hosts ansible_cond.yml
+   94  shutdown now
+   95  git
+   96  ls
+   97  cd ansible
+   98  git clone https://github.com/CiscoDevNet/dne-dna-code
+   99  cd dne-dna-code/
+  100  ls
+  101  python3 -m venv venv
+  102  apt install python3.8-venv
+  103  source venv/bin/activate
+  104  ls
+  105  source venv/bin/activate
+  106  python3 -m venv
+  107  python3 -m venv /home/eve/ansible/dne-dna-code/
+  108  ls
+  109  cd .
+  110  cd ..
+  111  rmdir -r dne-dna-code/
+  112  rmdir dne-dna-code/
+  113  rmdir -f dne-dna-code/
+  114  rmdir --help
+  115  rmdir -p dne-dna-code/
+  116  rmdir dne-dna-code/ --ignore-fail-on-non-empty
+  117  ls
+  118  rm dne-dna-code/ 
+  119  rm -rf dne-dna-code/ 
+  120  ls
+  121  git clone https://github.com/CiscoDevNet/dne-dna-code
+  122  cd dne-dna-code/
+  123  ls
+  124  l
+  125  python3 -m venv /home/eve/ansible/dne-dna-code/
+  126  ls
+  127  source bin/activate
+  128  history 
+  129  cd intro-ansible/
+  130  ls
+  131  nano requirements.txt 
+  132  pip install -r requirements.txt
+  133  ansible --version
+  134  ls ansible-02-ios-modules
+  135  ll
+  136  cat hosts
+  137  ansible-playbook ansible-02-ios-modules/02-ios_command_show.yaml -i hosts -v
+  138  ls
+  139  nano ansible-02-ios-modules/
+  140  nano ansible-02-ios-modules/02-ios_command_show_interfaces.yaml 
+  141  ansible-playbook ansible-02-ios-modules/02-ios_command_show.yaml -i hosts -v
+  142  ls
+  143  ansible-playbook ansible-02-ios-modules/02-ios_command_show_interfaces.yaml -i hosts -v
+  144  ssh developer@sandbox-iosxe-latest-1.cisco.com
+  145  shutdown now
+  146  ls
+  147  cd ansible
+  148  ls
+  149  cd dne-dna-code/
+  150  ls
+  151  tree
+  152  ls
+  153  cd intro-ansible/
+  154  ls
+  155  cd ..
+  156  ls
+  157  source bin/activate
+  158  ls
+  159  ansible-02-ios-modules/02-ios_command_show_ntp.yaml
+  160  nano ansible-02-ios-modules/02-ios_command_show_ntp.yaml
+  161  cd intro-ansible/
+  162  ls
+  163  nano ansible-02-ios-modules/02-ios_command_show_ntp.yaml
+  164  ssh eve@192.168.198.132
+  165  ssh 192.168.198.132
+  166  ssh eve@192.168.198.132
+  167  ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 eve@192.168.198.132
+  168  nano ~/.ssh/config
+  169  ssh eve@192.168.198.132
+  170  nano ~/.ssh/config
+  171  ssh eve@192.168.198.132
+  172  nano /etc/ssh/sshd_config
+  173  ssh eve@192.168.198.132
+  174  systemctl status ssh
+  175  systemctl restart ssh
+  176  systemctl status ssh
+  177  systemctl start ssh
+  178  nano /etc/ssh/sshd_config
+  179  systemctl status ssh
+  180  systemctl start ssh
+  181  systemctl status ssh
+  182  (dne-dna-code) root@eve:/home/eve/ansible/dne-dna-code/intro-ansible# nano ~/.ssh/config^C
+  183  deactivate
+  184  exit
+  185  ls
+  186  cd ansible
+  187  ls
+  188  ch1_ansible
+  189  cd ch1_ansible
+  190  ls
+  191  nano hosts
+  192  nano playbook.yml 
+  193  nano hosts
+  194  cp /home/eve/ansible/dne-dna-code/intro-ansible/ansible-02-ios-modules/02-ios_command_show.yaml /home/eve/ansible/ch1_ansible/
+  195  ls
+  196  cd group_vars/
+  197  ls
+  198  nano cisco.yml 
+  199  cd ..
+  200  ansible-playbook 02-ios_command_show.yaml -i hosts -v
+  201  ansible-playbook playbook.yml -i hosts -v
+  202  nano playbook.yml 
+  203  nano 02-ios_command_show.yaml
+  204  ansible-playbook 02-ios_command_show.yaml -i hosts -v
+  205  nano 02-ios_command_show.yaml
+  206  ansible-playbook 02-ios_command_show.yaml -i hosts -v
+  207  nano 02-ios_command_show.yaml
+  208  ansible-playbook 02-ios_command_show.yaml -i hosts -v
+  209  nano ansible_loops.yml
+  210  nano group_vars/cisco.yml 
+  211  nano group_vars/juniper.yml 
+  212  nano ansible_loops.yml
+  213  ansible-playbook ansible_loops.yml -i hosts -v
+  214  nano ansible_loops.yml
+  215  ansible-playbook ansible_loops.yml -i hosts -v
+  216  nano ansible_loops.yml
+  217  nano hosts
+  218  nano ansible_loops.yml
+  219  ansible-playbook ansible_loops.yml -i hosts -v
+  220  nano ansible_loops.yml
+  221  ansible-playbook ansible_loops.yml -i hosts -v
+  222  nano group_vars/juniper.yml 
+  223  ansible-playbook ansible_loops.yml -i hosts -v
+  224  nano group_vars/juniper.yml 
+  225  ansible-playbook ansible_loops.yml -i hosts -v
+  226  ansible-playbook ansible_loops.yml -i hosts
+  227  echo 'strong_password' > decrypt_passwd
+  228  ansible-vault create --vault-id=decrypt_passwd secrets
+  229  nano ansible_vault.yml
+  230  ansible-playbook --vault-id=decrypt_passwd ansible_vault.yml -i
+  231  ansible-playbook --vault-id=decrypt_passwd ansible_vault.yml -i hosts
+  232  ls
+  233  nano decrypt_passwd 
+  234  ansible-playbook --vault-id=decrypt_passwd ansible_vault.yml -i hosts
+  235  nano decrypt_passwd 
+  236  ansible-playbook --vault-id=decrypt_passwd ansible_vault.yml -i hosts
+  237  ansible-playbook ansible_vault.yml -i hosts --ask-vault-pass
+  238  nano decrypt_passwd 
+  239  nano group_vars/network.yml
+  240  mkdir templates
+  241  nano templates/ios_basic.j2
+  242  nano templates/junos_basic.j2
+  243  ansible-playbook --vault-id=decrypt_passwd ansible_vault.yml -i hosts
+  244  nano ansible_jinja2.yml
+  245  ansible-playbook -i hosts ansible_jinja2.yml
+  246  ls
+  247  ls configs/
+  248  nano  configs/csr
+  249  nano  configs/csr1.cfg 
+  250  sudo apt-get install python3-pip
+  251  pip3 install netaddr
+  252  nano ansible_filters.yml
+  253  ansible-playbook ansible_filters.yml -i hosts 
+  254  nano ansible_filters.yml
+  255  ansible-playbook ansible_filters.yml -i hosts -v
+  256  ansible-playbook -i hosts ansible_filters.yml 
+  257  ansible-playbook -i hosts ansible_jinja2.yml
+  258  cat configs/csr1_interfaces.cfg
+  259  nano ansible_filters.yml
+  260  ansible-playbook -i hosts ansible_filters.yml 
+  261  ls
+  262  ansible-playbook -i hosts 02-ios_command_show.yaml 
+  263  nano 02-ios_command_show.yaml 
+  264  nano ansible_filters.yml
+  265  ansible-playbook -i hosts ansible_filters.yml 
+  266  cat configs/csr1_interfaces.cfg
+  267  nano host
+  268  nano hosts
+  269  nano ansible_tags.yml
+  270  ansible-playbook ansible_tags.yml -i hosts --tags routing
+  271  ansible-playbook ansible_tags.yml -i hosts --tags ospf
+  272  ansible-playbook ansible_tags.yml -i hosts --tags ntp
+  273  nano ansible_tags.yml
+  274  ansible-playbook -i hosts ansible_filters.yml 
+  275  ifconfig
+  276  nano ansible.cfg
+  277  nano /etc/ansible/ansible.cfg 
+  278  nano ansible.cfg
+  279  mkdir roles
+  280  cd roles/
+  281  ansible-galaxy init basic_config
+  282  tree
+  283  cd ..
+  284  ls
+  285  history 
+  286  nano basic_config/vars/main.yml
+  287  cd roles/
+  288  nano basic_config/vars/main.yml
+  289  nano basic_config/tasks/main.yml
+  290  basic_config/templates 
+  291  cd basic_config/templates 
+  292  nano ios.j2
+  293  nano .j2
+  294  nano .j2.j2
+  295  ls
+  296  nano junos.j2
+  297  cd /home/eve/ansible/ch1_ansible/
+  298  ls
+  299  nano pb_ansible_role.yml
+  300  tree roles/
+  301  nano pb_ansible_role.yml
+  302  ansible-playbook pb_ansible_role.yml
+  303  ls
+  304  nano ansible.cfg 
+  305  ansible-playbook pb_ansible_role.yml
+  306  ls
+  307  ls basic_config/
+  308  nano basic_config/r1.cfg 
+  309  nano hosts
+  310  ansible-doc -l
+  311  ansible doc
+  312  ansible-doc aci_filter
+  313  ls
+  314  nano /usr/lib/python3/dist-packages/ansible_collections/cisco/aci/plugins/modules/aci_filter.py
+  315  history 
+  316  ls
+  317  nano commands_minikube_awx.txt 
+  318  minikube start --addons=ingress --cpus=4 --cni=flannel --install-addons=true --kubernetes-version=v1.21.10 --memory=7g
+  319  minikube start --addons=ingress --cpus=4 --cni=flannel --install-addons=true --kubernetes-version=v1.21.10 --memory=4g
+  320  su eve
+  321  ls
+  322  cd ansible
+  323  ls
+  324  mkdir ch2_ios
+  325  cd ch2_ios/
+  326  nano hosts
+  327  ping 192.168.198.137
+  328  ssh eve@192.168.198.137
+  329  nano ~/.ssh/config
+  330  ssh eve@192.168.198.132
+  331  nano ~/.ssh/config
+  332  ping 192.168.198.132
+  333  ssh eve@192.168.198.132
+  334  ssh 192.168.198.132
+  335  systemctl status ssh
+  336  ssh 192.168.198.132
+  337  ping 192.168.198.132
+  338  history 
+  339  ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 eve@192.168.198.132
+  340  cd ..
+  341  cd ch1
+  342  cd ch1_ansible/
+  343  ls
+  344  ansible-playbook 02-ios_command_show.yaml -i hosts -v
+  345  nano host
+  346  nano hosts
+  347  ping 192.168.198.132
+  348  ssh 192.168.198.132
+  349  nano ~/.ssh/config
+  350  ansible-playbook 02-ios_command_show.yaml -i hosts -v
+  351  ssh 192.168.198.132
+  352  nano /root/.ssh/known_hosts
+  353  ssh-keygen -f "/root/.ssh/known_hosts" -R "192.168.198.132"
+  354  ssh 192.168.198.132
+  355  ssh eve@192.168.198.132
+  356  ansible-playbook 02-ios_command_show.yaml -i hosts -v
+  357  nano /root/.ssh/known_hosts
+  358  nano ~/.ssh/config
+  359  mv ~/.ssh/configy ~/.ssh/config
+  360  ls
+  361  nano ~/.ssh/config
+  362  ssh eve@192.168.198.137
+  363  ssh eve@192.168.198.138
+  364  ssh eve@192.168.198.139
+  365  nano hosts
+  366  ansible-playbook 02-ios_command_show.yaml -i hosts -v
+  367  nano 02-ios_command_show.yaml
+  368  ansible-playbook 02-ios_command_show.yaml -i hosts -v
+  369  shutdown now
+  370  ansible-playbook 02-ios_command_show.yaml -i hosts -v
+  371* 
+  372  cd ansible/ch1
+  373  cd ansible/ch1_ansible/
+  374  ansible-playbook 02-ios_command_show.yaml -i hosts -v
+  375  ssh eve@192.168.198.140
+  376  ansible-playbook 02-ios_command_show.yaml -i hosts -v
+  377  ssh eve@192.168.198.140
+  378  ssh eve@192.168.198.141
+  379  nano ~/.ssh/config
+  380  nano /root/.ssh/known_hosts
+  381  nano hosts
+  382  ansible-playbook 02-ios_command_show.yaml -i hosts -v
+  383  reboot
+  384  cd ansible/ch1_ansible/
+  385  ansible-playbook 02-ios_command_show.yaml -i hosts -v
+  386  ansible-playbook 02-ios_command_show.yaml -i hosts
+  387  cd ..
+  388  cd ch2
+  389  cd ch2_ios/
+  390  ls
+  391  nano hosts 
+  392  nano Ansible.cfg
+  393  mv Ansible.cfg ansible.cfg
+  394  nano ansible.cfg 
+  395  mkdir groups_vars
+  396  nano groups_vars/network.yml
+  397  nano ansible.cfg 
+  398  nano pb_gather_SSH_keys.yml
+  399  nano hosts 
+  400  nano /root/.ssh/known_hosts
+  401  ansible-playbook pb_gather_SSH_keys.yml -i hosts
+  402  nano pb_gather_SSH_keys.yml
+  403  nano hosts 
+  404  nano pb_gather_SSH_keys.yml
+  405  ansible-playbook pb_gather_SSH_keys.yml -i hosts
+  406  nano pb_gather_SSH_keys.yml
+  407  nano ansible.cfg 
+  408  nano hosts 
+  409  nano ansible.cfg 
+  410  nano pb_gather_SSH_keys.yml
+  411  l
+  412  nano groups_vars/network.yml 
+  413  nano hosts 
+  414  nano pb_gather_SSH_keys.yml
+  415  ansible-playbook pb_gather_SSH_keys.yml -i hosts
+  416  nano hosts 
+  417  ansible-playbook pb_gather_SSH_keys.yml -i hosts
+  418  nano /root/.ssh/known_hosts
+  419  ansible-playbook pb_gather_SSH_keys.yml -i hosts
+  420  nano pb_gather_SSH_keys.yml
+  421  ansible-playbook pb_gather_SSH_keys.yml -i hosts
+  422  ping localhost
+  423  nano pb_gather_SSH_keys.yml
+  424  ansible-playbook pb_gather_SSH_keys.yml -i hosts
+  425  ping 192.168.198.137
+  426  nano pb_gather_SSH_keys.yml
+  427  ansible-playbook pb_gather_SSH_keys.yml -i hosts
+  428  nano /etc/ssh/ssh_config
+  429  ansible-playbook pb_gather_SSH_keys.yml -i hosts
+  430  sudo ufw allow ssh
+  431  ansible-playbook pb_gather_SSH_keys.yml -i hosts
+  432  echo "KexAlgorithms diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1" >>/etc/ssh/ssh_config.d/weak.conf
+  433  ansible-playbook pb_gather_SSH_keys.yml -i hosts
+  434  nano /etc/ssh/ssh_config
+  435  ansible-playbook pb_gather_SSH_keys.yml -i hosts
+  436  sudo ufw allow ssh
+  437  nano pb_gather_SSH_keys.yml
+  438  cp /home/eve/ansible/ch1_ansible/02-ios_command_show.yaml /home/eve/ansible/ch2_ios/
+  439  ls
+  440  nano 02-ios_command_show.yaml 
+  441  ansible-playbook 02-ios_command_show.yaml -i hosts
+  442  nano pb_gather_SSH_keys.yml
+  443  nano 02-ios_command_show.yaml 
+  444  nano ansible.cfg 
+  445  nano hosts 
+  446  ansible-playbook 02-ios_command_show.yaml -i hosts
+  447  cd ..
+  448  cd ch1
+  449  cd ch1²
+  450  cd ch1_ansible/
+  451  ls
+  452  nano host
+  453  nano hosts
+  454  cd ..
+  455  cd ch2_ios/
+  456  nano hosts 
+  457  ansible-playbook 02-ios_command_show.yaml -i hosts
+  458  ansible-playbook pb_gather_SSH_keys.yml -i hosts
+  459  nano /etc/ssh/ssh_config
+  460  ansible-playbook pb_gather_SSH_keys.yml -i hosts
+  461  ssh eve@192.168.198.140
+  462  ssh eve@192.168.198.138
+  463  history 
+  464  history >> commands

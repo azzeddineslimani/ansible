@@ -1,0 +1,23 @@
+[access]
+access01    ansible_host=192.168.198.137 ansible_user=eve ansible_ssh_pass=eve ansible_network_os=cisco.ios.ios
+access02    ansible_host=192.168.198.138 ansible_user=eve ansible_ssh_pass=eve ansible_network_os=cisco.ios.ios
+
+[core]
+core01     ansible_host=192.168.198.139 ansible_network_os=cisco.ios.ios
+core02     ansible_host=192.168.198.140 ansible_network_os=cisco.ios.ios
+
+[wan]
+wan01      ansible_host=192.168.198.141 ansible_network_os=cisco.ios.ios
+wan02      ansible_host=192.168.198.142 ansible_network_os=cisco.ios.ios
+
+#[isp]
+#isp01      ansible_host=172.20.1.24
+
+[lan:children]
+access
+core
+
+[network:children]
+lan
+wan
+#isp
