@@ -5,8 +5,9 @@
   connection: network_cli
   tasks:
     - name: Gather facts
-      ios_facts:
-        gather_subset: hardware
+      cisco.ios.ios_facts:
+        gather_subset:
+        - hardware
 
     - name: Display current IOS version
       debug:
