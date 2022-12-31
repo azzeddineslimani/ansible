@@ -7,7 +7,7 @@
     - cisco.ios
   tasks:
     - name: "P1T1: Configure Hostname and Domain Name"
-      ios_system:
+      cisco.ios.ios_system:
         hostname: git
         domain_name: git.fr
         lookup_enabled: no
