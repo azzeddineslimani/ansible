@@ -1,4 +1,0 @@
-core_vlans:
-- name: l3_core_vlan
-vlan_id: 200
-interface: Ethernet0/3

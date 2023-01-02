@@ -19,9 +19,6 @@ interfaces:
     - name: GigabitEthernet0/3
       description: core01_e0/3
       mode: trunk
-    - name: GigabitEthernet1/0
-      description: core01_e0/3
-      mode: trunk
   core02:
     - name: GigabitEthernet0/1
       description: access01_e0/2
@@ -31,9 +28,6 @@ interfaces:
       mode: trunk
     - name: GigabitEthernet0/3
       description: core02_e0/3
-      mode: trunk
-    - name: GigabitEthernet1/0
-      description: core01_e0/3
       mode: trunk
   access01:
     - name: GigabitEthernet0/1
