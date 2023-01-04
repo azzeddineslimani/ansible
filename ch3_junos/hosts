@@ -1,16 +1,18 @@
 [pe]
 #mxpe01    ansible_host=192.168.198.143
 #mxpe02    ansible_host=192.168.198.144
+mxpe01    ansible_host=192.168.198.150 ansible_user=root ansible_ssh_pass=Juniper ansible_network_os=junos
+mxpe02    ansible_host=192.168.198.151 ansible_user=root ansible_ssh_pass=Juniper ansible_network_os=junos
 
 [p]
-mxp01     ansible_host=192.168.198.146 ansible_network_os=junos
+mxp01     ansible_host=192.168.198.152 ansible_user=root ansible_ssh_pass=Juniper ansible_network_os=junos
 #ansible_user=root ansible_ssh_pass=Juniper ansible_network_os=junos
-mxp02     ansible_host=192.168.198.150 ansible_user=root ansible_ssh_pass=Juniper ansible_network_os=junos
+mxp02     ansible_host=192.168.198.153 ansible_user=root ansible_ssh_pass=Juniper ansible_network_os=junos
 
-#[junos]
-#mxpe[01:02]
-#mxp[01:02]
+[junos]
+mxpe[01:02]
+mxp[01:02]
 
-#[core:children]
-#pe
-#p
+[core:children]
+pe
+p

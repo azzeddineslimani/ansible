@@ -1,0 +1,11 @@
+---
+- name: Build Juniper SP Network
+  hosts: junos
+  tasks:
+    - name: "Enable NETCONF"
+      junos_netconf:
+        netconf_port: 830
+        state: present
+      vars:
+        ansible_connection: network_cli
+      tags: netconf

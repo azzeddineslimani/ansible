@@ -1,0 +1,28 @@
+---
+- name: Configure Juniper Devices
+  hosts: junos
+  tasks:
+    - name: "Conifgure Basic System config"
+      junos_system:
+        hostname: "{{ inventory_hostname }}"
+        name_servers: "{{ global.dns }}"
+        state: present
+      tags: system
+
+    - name: "Configure Users with SSH Keys"
+      junos_user:
+        name: "{{ item.username }}"
+        role: "{{ item.role }}"
+        sshkey: "{{ lookup ('file', item.ssh_key) }}"
+        state: present
+      with_items: "{{ global.users | selectattr('ssh_key','defined') | list }}"
+      tags: system
+
+    - name: "Configure Users with Password"
+      junos_user:
+        name: "{{ item.username }}"
+        role: "{{ item.role }}"
+        encrypted_password: "{{  item.hash }}"
+        state: present
+      with_items: "{{ global.users | selectattr('hash','defined') | list }}"
+      tags: system
