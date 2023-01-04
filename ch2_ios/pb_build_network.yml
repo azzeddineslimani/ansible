@@ -75,6 +75,18 @@
 #      tags : vlan
 
 
+
+    - name: "P1T6: Enable dot1q Trunks"
+      ios_config:
+        lines:
+          - switchport trunk encapsulation dot1q
+        parents: interface {{item.name}}
+      loop: "{{ interfaces[inventory_hostname] | selectattr('mode','equalto','trunk') | list }}"
+      tags: dot1q
+
+
+
+
     - name: "P1T6: Enable dot1q Trunks P1T5: Configure L2 Trunks"
       ios_l2_interfaces:
         config:
@@ -351,7 +363,7 @@
       ios_ntp:
         server: "{{ ntp_server }}"
         logging: true
-        source_int: GigabitEthernet2
+        source_int: GigabitEthernet0/2
         state: present
 
  #   - name: "P3T2: Configure Managment Static Routes"
@@ -370,7 +382,7 @@
         config:
         - name: "{{ item.name }}"
           description: "{{ item.description | default('') }}"
-          mtu: "{{ intf_mtu }}"
+#          mtu: "{{ intf_mtu }}"
           enabled: true
         state: merged
       loop: "{{ wan_l3_links[inventory_hostname] }}"
