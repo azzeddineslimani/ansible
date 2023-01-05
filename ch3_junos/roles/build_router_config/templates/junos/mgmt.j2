@@ -1,0 +1,37 @@
+{#
+**************************************************
+###         System configuration            ######
+**************************************************
+#}
+system {
+    host-name {{inventory_hostname}};
+    no-redirects;
+{%  if global.dns is defined %}
+    name-server {
+{%      for dns_server in global.dns %}
+        {{dns_server}};
+{%      endfor %}
+    }
+{%  endif %}
+    root-authentication {
+        encrypted-password "{{ global.root_pwd}}"; ## SECRET-DATA
+    }
+    login {
+{%      for user in global.users if user.hash is defined %}
+        user {{ user.username }} {
+            class super-user;
+            authentication {
+                encrypted-password "{{user.hash}}"; ## SECRET-DATA
+            }
+        }
+{%      endfor %}
+{%      for user in global.users if user.ssh_key is defined %}
+        user {{ user.username }} {
+            class {{ user.role }};
+            authentication {
+                ssh-rsa "{{lookup('file',user.ssh_key)}}"; ## SECRET-DATA
+            }
+        }
+{%      endfor %}
+    }
+}
