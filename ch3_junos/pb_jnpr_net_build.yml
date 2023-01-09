@@ -16,3 +16,11 @@
       vars:
           ansible_connection: local
       tags: build
+    - name: "Deploy Configuration"
+      junos_config:
+        src: "{{config_dir}}/{{ inventory_hostname }}.cfg"
+      tags: deploy
+    - name: "Rollback config"
+      junos_config:
+        rollback: "{{ rollback | default('1') | int }}"
+      tags: rollback, never

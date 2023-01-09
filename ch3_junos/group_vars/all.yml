@@ -15,6 +15,7 @@ global:
   ospf_pid: 1
   p2p_prefix: 31
   root_pwd: $1$K5gTWVRG$XO9eMt3ZwXvUsjjGRdinQ1
+  setup: isp
   users:
   -   role: super-user
       ssh_key: ansible_ssh_key.pub

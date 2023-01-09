@@ -20,8 +20,8 @@
     dest: "{{build_dir}}/03_mpls.cfg"
   tags: mpls
 
-- name: "BGP Configuration"
-  template:
-    src: "{{ansible_network_os}}/bgp.j2"
-    dest: "{{build_dir}}/04_bgp.cfg"
-  tags: bgp
+#- name: "BGP Configuration"
+#  template:
+#    src: "{{ansible_network_os}}/bgp.j2"
+#    dest: "{{build_dir}}/04_bgp.cfg"
+#  tags: bgp
