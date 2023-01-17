@@ -1,0 +1,43 @@
+---
+- name: Create NetBox Sites
+  netbox_site:
+    netbox_token: "{{ netbox_token }}"
+    netbox_url: "{{ netbox_url }}"
+    data:
+      name: "{{ item.name | lower }}"
+      description: "{{ item.description | default(omit) }}"
+      physical_address: "{{ item.location | default(omit) }}"
+    state: "{{ netbox_state }}"
+    validate_certs: "false"
+  loop: "{{ sites }}" 
+  when: sites is defined
+  run_once: yes
+  tags: netbox_sites
+- name: Create NetBox Device Vendors
+  include_tasks: create_device_vendors.yml
+  loop: "{{ devices | map(attribute='vendor') | list | unique}}"
+  loop_control:
+    loop_var: device
+  run_once: yes
+  tags: 
+    - device_vendors
+- name: Create NetBox Device Types
+  include_tasks: create_device_types.yml
+  loop: "{{ devices }}"
+  loop_control:
+    loop_var: device
+  run_once: yes
+  tags: 
+    - device_types
+- name: Create NetBox Device Roles
+  include_tasks: create_device_roles.yml
+  loop: "{{ devices }}"
+  loop_control:
+    loop_var: device
+  run_once: yes
+  tags: 
+    - device_roles
+
+- name: Create NetBox Device 
+  include_tasks: create_device.yml
+  tags: netbox_devices

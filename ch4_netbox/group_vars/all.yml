@@ -1,0 +1,24 @@
+---
+netbox_url: http://192.168.19.143:8000
+netbox_token: ad4f7e87dd933abf5ff33900bf01d14bf0078581
+#validate_certs: no
+
+sites:
+  - name: DC1
+    description: "Main Data Center in Sydney"
+    location: Sydney
+  - name: DC2
+    description: "Main Data Center in KSA"
+    location: Riyadh
+
+devices:
+  - role: Leaf_Switch
+    type: 7020SR
+    vendor: Arista
+    color: 'f44336'  # red
+  - role: Spine_Switch
+    type: 7050CX3
+    ru: 2
+    vendor: Arista
+    color: '2196f3'  # blue
+
