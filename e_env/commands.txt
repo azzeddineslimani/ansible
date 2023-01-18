@@ -1,0 +1,1000 @@
+  979  nano pb_collect_facts.yml 
+  980  ansible-playbook pb_collect_facts.yml 
+  981  nano facts.yml 
+  982  git add .
+  983  nano pb_build_network.yml 
+  984  nano facts.yml 
+  985  nano pb_build_network.yml 
+  986  nano pb_net_validate.yml
+  987  ansible-playbook pb_net_validate.yml
+  988  ls
+  989  ls group_vars/
+  990  ansible-playbook pb_build_network.yml
+  991  ansible-playbook pb_net_validate.yml
+  992  nano group_vars/core.yml 
+  993  nano pb_net_validate.yml
+  994  ansible-playbook pb_net_validate.yml --tags=svi
+  995  nano pb_net_validate.yml
+  996  ansible-playbook pb_net_validate.yml
+  997  ls
+  998  ll
+  999  nano pb_net_validate.yml 
+ 1000  ansible-playbook pb_net_validate.yml
+ 1001  nano pb_build_network
+ 1002  nano pb_build_network.yml 
+ 1003  nano pb_net_validate.yml 
+ 1004  nano pb_build_network.yml 
+ 1005  ansible-playbook pb_net_validate.yml
+ 1006  ansible-playbook pb_build_network.yml
+ 1007  nano pb_build_network.yml
+ 1008  ansible-playbook pb_net_validate.yml
+ 1009  nano pb_build_network.yml
+ 1010  ansible-playbook pb_build_network.yml
+ 1011  nano pb_build_network.yml
+ 1012  ansible-playbook pb_build_network.yml
+ 1013  nano pb_build_network.yml
+ 1014  ansible-playbook pb_build_network.yml
+ 1015  nano pb_build_network.yml
+ 1016  nano group_vars/core.yml 
+ 1017  nano pb_build_network.yml
+ 1018  ansible-playbook pb_build_network.yml
+ 1019  nano pb_build_network.yml
+ 1020  ansible-playbook pb_net_validate.yml
+ 1021  nano pb_build_network.yml
+ 1022  ansible-playbook pb_build_network.yml
+ 1023  nano pb_build_network.yml
+ 1024  ansible-playbook pb_build_network.yml
+ 1025  ansible-playbook pb_net_validate.yml
+ 1026  nano pb_net_validate.yml
+ 1027  ansible-playbook pb_net_validate.yml
+ 1028  ping 10.1.100.1
+ 1029  ansible-playbook pb_net_validate.yml
+ 1030  nano pb_net_validate.yml
+ 1031  ansible-playbook pb_net_validate.yml
+ 1032  nano pb_op_cmds.yml
+ 1033  ansible-playbook pb_op_cmds.yml
+ 1034  ls
+ 1035  git status 
+ 1036  git add .
+ 1037  git status 
+ 1038  head op_data/core01/show_ip_ospf_neighbor.txt
+ 1039  sudo pip3 install pyats genie
+ 1040  mkdir roles
+ 1041  nano roles/requirements.yml
+ 1042  Ansible-galaxy install -r roles/requirements.yml
+ 1043  ansible-galaxy install -r roles/requirements.yml
+ 1044  nano roles/requirements.yml
+ 1045  ansible-galaxy install -r roles/requirements.yml
+ 1046  Ansible-galaxy install ansible-pyats
+ 1047  ansible-galaxy install ansible-pyats
+ 1048  ansible-galaxy install pyats
+ 1049  naon group_vars/wan.yml
+ 1050  nano group_vars/wan.yml
+ 1051  rm group_vars/wan.yml
+ 1052  nano group_vars/wan.yml
+ 1053  nano pb_build_network.yml
+ 1054  ansible-playbook pb_build_network.yml
+ 1055  nano pb_build_network.yml
+ 1056  ansible-playbook pb_build_network.yml
+ 1057  nano pb_build_network.yml
+ 1058  ansible-playbook pb_build_network.yml
+ 1059  nano pb_build_network.yml
+ 1060  ansible-playbook pb_build_network.yml
+ 1061  nano pb_build_network.yml
+ 1062  ansible-playbook pb_build_network.yml
+ 1063  nano pb_build_network.yml
+ 1064  ansible-playbook pb_build_network.yml
+ 1065  history 
+ 1066  git add .
+ 1067  git commit -m "01/01/2023 late"
+ 1068  git push -u origin master
+ 1069  shutdown now
+ 1070  cd ansible
+ 1071  ls
+ 1072  mkdir ch3_junos
+ 1073  cd ch3_junos/
+ 1074  nano hosts
+ 1075  cd ..
+ 1076  cd ch2_ios/
+ 1077  ls
+ 1078  nano hosts
+ 1079  cd ..
+ 1080  cd ch3_junos/
+ 1081  nano hosts 
+ 1082  nano 
+ 1083  nano ansible.cfg
+ 1084  Ansible-inventory --list
+ 1085  ansible-inventory --list
+ 1086  SSH-keygen -t rsa -b 2048 -f Ansible_SSH_key
+ 1087  ssh-keygen -t rsa -b 2048 -f Ansible_SSH_key
+ 1088  cat Ansible_SSH_key
+ 1089  cat Ansible_SSH_key.pub 
+ 1090  nano hosts 
+ 1091  ssh admni@192.168.198.145
+ 1092  ssh admin@192.168.198.145
+ 1093  ansible all -m ping -u admin --private-key Ansible_SSH_key -c network_cli
+ 1094  ping 192.168.198.145
+ 1095  ssh root@192.168.198.145
+ 1096  cd ..
+ 1097  cd ch2_ios/
+ 1098  ls
+ 1099  nano host
+ 1100  nano hosts
+ 1101  cd ..
+ 1102  cd ch3_junos/
+ 1103  ls
+ 1104  nano hosts 
+ 1105  ansible all -m ping  -c network_cli
+ 1106  ansible all -m ping -c network_cli
+ 1107  cd ..
+ 1108  cd ch2_ios/
+ 1109  nano host
+ 1110  nano hosts
+ 1111  cd .
+ 1112  cd ..
+ 1113  cd ch3_junos/
+ 1114  ls
+ 1115  nano hosts 
+ 1116  ansible all -m ping -c network_cli
+ 1117  nano hosts 
+ 1118  ansible all -m ping -c network_cli
+ 1119  mkdir groupe_vars
+ 1120  nano groupe_vars/junos.yaml
+ 1121  nano hosts 
+ 1122  nano groupe_vars/junos.yaml
+ 1123  nano hosts 
+ 1124  ansible all -m ping -c network_cli
+ 1125  nano hosts 
+ 1126  ansible all -m ping -c network_cli
+ 1127  nano hosts 
+ 1128  ansible all -m ping -c network_cli
+ 1129  nano hosts 
+ 1130  cd ansible/ch3_junos/
+ 1131  ls
+ 1132  nano hosts 
+ 1133  history 
+ 1134  cd ansible
+ 1135  cd ch3_junos/
+ 1136  ls
+ 1137  ansible all -m ping -c network_cli
+ 1138  cd ..
+ 1139  ch2_ios/
+ 1140  cd ch2_ios/
+ 1141  ansible-playbook pb_build_network.yml 
+ 1142  ansible-playbook pb_build_network.yml 
+ 1143  nano pb_build_network.yml 
+ 1144  nano group_vars/wan.yml 
+ 1145  nano pb_build_network.yml 
+ 1146  ansible-playbook pb_build_network.yml 
+ 1147  nano group_vars/wan.yml 
+ 1148  ansible-playbook pb_build_network.yml 
+ 1149  nano group_vars/wan.yml 
+ 1150  nano pb_build_network.yml 
+ 1151  ansible-playbook pb_build_network.yml 
+ 1152  nano group_vars/wan.yml 
+ 1153  ls group_vars/
+ 1154  nano group_vars/wan.yml 
+ 1155  ansible-playbook pb_build_network.yml 
+ 1156  nano pb_build_network.yml 
+ 1157  nano pb_3.yml
+ 1158  ansible-playbook pb_3.yml
+ 1159  nano pb_3.yml 
+ 1160  nano group_vars/wan.yml 
+ 1161  nano pb_3.yml 
+ 1162  nano group_vars/wan.yml 
+ 1163  nano pb_3.yml 
+ 1164  ansible-playbook pb_3.yml
+ 1165  nano pb_3.yml 
+ 1166  nano pb_build_network.yml 
+ 1167  nano pb_3.yml 
+ 1168  ansible-playbook pb_3.yml
+ 1169  nano group_vars/core.yml 
+ 1170  nano group_vars/wan.yml 
+ 1171  ansible-playbook pb_3.yml
+ 1172  ll host_vars/
+ 1173  nano host_vars/wan01.yml
+ 1174  nano host_vars/wan02.yml
+ 1175  nano pb_3.yml
+ 1176  nano group_vars/wan.yml 
+ 1177  ansible-playbook pb_3.yml
+ 1178  nano group_vars/wan.yml 
+ 1179  ansible-playbook pb_3.yml
+ 1180  nano pb_3.yml
+ 1181  ansible-playbook pb_3.yml -v
+ 1182  nano pb_3.yml
+ 1183  ansible-playbook pb_3.yml -v
+ 1184  ansible-playbook pb_net_validate.yml 
+ 1185  nano pb_build_network.yml 
+ 1186  ansible-playbook pb_build_network.yml
+ 1187  ansible-playbook pb_net_validate.yml 
+ 1188  cd ..
+ 1189  cd ch3_junos/
+ 1190  ll
+ 1191  nano hosts 
+ 1192  history 
+ 1193  $ Ansible all -m ping -c network_cli
+ 1194  $ ansible all -m ping -c network_cli
+ 1195  $ ansible all -m ping
+ 1196  reboot
+ 1197  ansible all -m ping
+ 1198  cd ansible/ch3_junos/
+ 1199  ansible all -m ping
+ 1200  ansible all -m ping -c network_cli
+ 1201  nano groupe_vars/junos.yaml 
+ 1202  pwd
+ 1203  nano groupe_vars/junos.yaml 
+ 1204  ansible all -m ping -u admin --private-key Ansible_SSH_key  -c network_cli
+ 1205  nano groupe_vars/junos.yaml 
+ 1206  nano hosts
+ 1207  ansible all -m ping -u admin --private-key Ansible_SSH_key  -c network_cli
+ 1208  nano hosts
+ 1209  ansible all -m ping -u admin --private-key Ansible_SSH_key  -c network_cli
+ 1210  ansible all -m ping -c network_cli
+ 1211  ansible all -m ping -c network_cli -v
+ 1212  nano ansible.cfg 
+ 1213  nano hosts
+ 1214  ping 192.168.198.145
+ 1215  ping 192.168.198.150
+ 1216  ansible all -m ping -c network_cli -v
+ 1217  nano hosts
+ 1218  ansible all -m ping -c network_cli -v
+ 1219  nano hosts
+ 1220  nano groupe_vars/junos.yaml 
+ 1221  ssh admin@192.168.198.145
+ 1222  ansible all -m ping -u admin --private-key Ansible_SSH_key -c network_cli
+ 1223  reboot
+ 1224  cd ansible/ch3_junos/
+ 1225  ls
+ 1226  nano hosts 
+ 1227  ansible all -m ping -u admin --private-key Ansible_SSH_key -c network_cli
+ 1228  cd ansible
+ 1229  ssh-keygen -t ed25519 azzeddineslimani10@gmail.com
+ 1230  cd ~/.ssh
+ 1231  ssh-keygen -o -t ed25519 azzeddineslimani10@gmail.com
+ 1232  ssh-keygen -o -t rsa -C azzeddineslimani10@gmail.com
+ 1233  cat id_rsa.pub
+ 1234  pwd
+ 1235  cd ..
+ 1236  ls
+ 1237  cd ..
+ 1238  ls
+ 1239  exit
+ 1240  cd ansible
+ 1241  git commit git@github.com:azzeddineslimani/ansible.git
+ 1242  git pull git@github.com:azzeddineslimani/ansible.git
+ 1243  ls -al ~/.ss
+ 1244  cd ~/.ssh
+ 1245  ssh-keygen -o -t ed25519 -C azzeddineslimani10@gmail.com
+ 1246  l
+ 1247  ll
+ 1248  cat id_ed25519.pub 
+ 1249  cd /home/eve/ansible
+ 1250  git status
+ 1251  git add .
+ 1252  git commit -m "04/01/2023"
+ 1253  history 
+ 1254  git push -u origin master
+ 1255  git init
+ 1256  git push
+ 1257  git remote add origin git@github.com:azzeddineslimani/ansible.git
+ 1258  git pull origin master
+ 1259  git remote rm origin
+ 1260  git remote add origin git@github.com:azzeddineslimani/ansible.git
+ 1261  git fetch origin
+ 1262  nano ~/.ssh/config
+ 1263  git fetch origin
+ 1264  nano ~/.ssh/config
+ 1265  git fetch origin
+ 1266  ssh -T -p 443 git@github.com:azzeddineslimani/ansible.git
+ 1267  git fetch origin
+ 1268  nano ~/.ssh/config
+ 1269  git fetch origin
+ 1270  sudo apt-get update
+ 1271  sudo apt-get upgrade
+ 1272  apt install ssh
+ 1273  sysctl status ssh
+ 1274  systemctl status ssh
+ 1275  systemctl restart ssh
+ 1276  systemctl status ssh
+ 1277  git fetch origin
+ 1278  nano ~/.ssh/config
+ 1279  git fetch origin
+ 1280  nano ~/.ssh/config
+ 1281  cd ~/.ssh
+ 1282  cat id_rsa.pub 
+ 1283  cd /home/eve/ansible
+ 1284  git fetch origin
+ 1285  cd ~/.ssh
+ 1286  ls
+ 1287  cd config 
+ 1288  nano  config 
+ 1289  nano authorized_keys 
+ 1290  rm id_ed25519
+ 1291  rm id_ed25519.pub 
+ 1292  cd /home/eve/ansible
+ 1293  git fetch origin
+ 1294  ssh -T -oKexAlgorithms=+diffie-hellman-group-exchange-sha256 git@github.com
+ 1295  git fetch origin
+ 1296  nano ~/.ssh/config
+ 1297  git fetch origin
+ 1298  nano ~/.ssh/config
+ 1299  git fetch origin
+ 1300  git remote -v
+ 1301  nano /etc/ssh/sshd_config
+ 1302  nano /etc/ssh/ssh_host_rsa_key
+ 1303  git fetch origin
+ 1304  ssh -Q cipher
+ 1305  ssh -Q kex
+ 1306  nano ~/.ssh/config
+ 1307  git fetch origin
+ 1308  history 
+ 1309  git remote rm origin
+ 1310  git remote add origin https://github.com/azzeddineslimani/ansible.git
+ 1311  git fetch origin
+ 1312  git status
+ 1313  git commit -a
+ 1314  git rm dne-dna-code/
+ 1315  git push 
+ 1316  git push --set-upstream origin master
+ 1317  l
+ 1318  ll
+ 1319  rm bin
+ 1320  rm -r  bin
+ 1321  rm -r include/
+ 1322  rm -r lib
+ 1323  rm -r lib64
+ 1324  rm -r pyvenv.cfg 
+ 1325  rm -r share/
+ 1326  rm -r dne-dna-code/
+ 1327  git status
+ 1328  git commit -a
+ 1329  history
+ 1330  git push
+ 1331  shutdown now
+ 1332  ls
+ 1333  cd ansible
+ 1334  ls
+ 1335  cd ch2_ios/
+ 1336  ls
+ 1337  ansible-playbook pb_build_network.yml 
+ 1338  cd..
+ 1339  cd ..
+ 1340  cd ch3
+ 1341  cd ch3_junos/
+ 1342  ls
+ 1343  nano hosts 
+ 1344  history 
+ 1345  ansible all -m ping -c network_cli -v
+ 1346  ansible all -m ping
+ 1347  ansible all -m ping -c network_cli -v
+ 1348  nano hosts 
+ 1349  ansible all -m ping -c network_cli -v
+ 1350  nano ansible.cfg 
+ 1351  ansible all -m ping -c network_cli -v
+ 1352  ping 192.168.198.151
+ 1353  ping 192.168.198.152
+ 1354  nano hosts 
+ 1355  ping 192.168.198.153
+ 1356  ansible all -m ping -c network_cli -v
+ 1357  nano ansible.cfg 
+ 1358  ansible all -m ping -c network_cli -v
+ 1359  nano groupe_vars/junos.yaml 
+ 1360  ls
+ 1361  rm Ansible_SSH_key
+ 1362  rm Ansible_SSH_key.pub 
+ 1363  nano pb_jnpr_net_build.yml
+ 1364  nano groupe_vars/junos.yaml 
+ 1365  ansible-playbook pb_jnpr_net_build.yml 
+ 1366  nano pb_jnpr_net_build.yml 
+ 1367  nano hosts 
+ 1368  ansible-playbook pb_jnpr_net_build.yml 
+ 1369  ssh root@192.168.198.150
+ 1370  ssh root@192.168.198.151
+ 1371  ansible-playbook pb_jnpr_net_build.yml 
+ 1372  nano groupe_vars/all.yml
+ 1373  nano pb_jnpr_basic_config.yml
+ 1374  nano  groupe_vars/all.yml
+ 1375  ssh-keygen -t rsa -b 2048 -f ansible_ssh_key.pub
+ 1376  ansible-playbook pb_jnpr_basic_config.yml
+ 1377  nano pb_jnpr_basic_config.yml
+ 1378  nano  groupe_vars/all.yml
+ 1379  nano pb_jnpr_basic_config.yml
+ 1380  ansible-playbook pb_jnpr_basic_config.yml -v
+ 1381  nano pb_jnpr_basic_config.yml 
+ 1382  cd ..
+ 1383  cd ch2
+ 1384  cd ch2_ios/
+ 1385  ls
+ 1386  nano pb_build_network.yml 
+ 1387  cd ..
+ 1388  cd ch3_junos/
+ 1389  nano pb_jnpr_basic_config.yml 
+ 1390  ansible-playbook pb_jnpr_basic_config.yml -v
+ 1391  nano pb_jnpr_basic_config.yml 
+ 1392  nano  groupe_vars/all.yml
+ 1393  nano pb_jnpr_basic_config.yml 
+ 1394  ansible-playbook pb_jnpr_basic_config.yml -v
+ 1395  nano pb_jnpr_basic_config.yml 
+ 1396  ansible-playbook pb_jnpr_basic_config.yml -v
+ 1397  nano  groupe_vars/all.yml
+ 1398  ansible-playbook pb_jnpr_basic_config.yml -v
+ 1399  nano  groupe_vars/all.yml
+ 1400  rm  groupe_vars/all.yml
+ 1401  nano  groupe_vars/all.yml
+ 1402  ansible-playbook pb_jnpr_basic_config.yml -v
+ 1403  nano pb_jnpr_basic_config.yml 
+ 1404  ansible-playbook pb_jnpr_basic_config.yml -v
+ 1405  shutdown now
+ 1406  cd ansible/ch3_junos/
+ 1407  ls
+ 1408  ansible-playbook pb_jnpr_basic_config.yml 
+ 1409  nano /home/eve/ansible/ch2_ios/group_vars/network.yml 
+ 1410  ls
+ 1411  ssh-keygen -t rsa -b 2048 -f ansible_ssh_key
+ 1412  ls
+ 1413  rm ansible_ssh_key
+ 1414  rm ansible_ssh_key.pub
+ 1415  rm ansible_ssh_key.pub.pub 
+ 1416  ls
+ 1417  ssh-keygen -t rsa -b 2048 -f ansible_ssh_key
+ 1418  nano groupe_vars/all.yml 
+ 1419  ansible-playbook pb_jnpr_basic_config.yml 
+ 1420  nano pb_jnpr_basic_config.yml 
+ 1421  ansible-playbook pb_jnpr_basic_config.yml 
+ 1422  mkdir group_vars/
+ 1423  cp groupe_vars/junos.yaml group_vars/
+ 1424  cp groupe_vars/all.yml group_vars/
+ 1425  ll group_vars/
+ 1426  rm -r groupe_vars/
+ 1427  ansible-playbook pb_jnpr_basic_config.yml 
+ 1428  cd ..
+ 1429  git commit -m "late 04/01/2023"
+ 1430  git add .
+ 1431  git commit -m "late 04/01/2023"
+ 1432  git push -origin maste
+ 1433  git push -origin master
+ 1434  history 
+ 1435  git push --set-upstream origin master
+ 1436  git status
+ 1437  shutdown 
+ 1438  mkdir host_vars
+ 1439  mkdir host_vars/mxp01
+ 1440  mkdir host_vars/mxp02
+ 1441  mkdir host_vars/mxpe02
+ 1442  mkdir host_vars/mxpe01
+ 1443  nano host_vars/mxp01/bgp.yml
+ 1444  nano host_vars/mxp0é/bgp.yml
+ 1445  nano host_vars/mxp02/bgp.yml
+ 1446  nano host_vars/mxpe02/bgp.yml
+ 1447  nano host_vars/mxpe01/bgp.yml
+ 1448  nano host_vars/mxp02/bgp.yml
+ 1449  nano roles/build_router_config/templates/junos/bgp.j2
+ 1450  ansible-playbook pb_jnpr_net_build.yml 
+ 1451  apt update
+ 1452  apt install nginx
+ 1453  systemctl start nginx
+ 1454  sudo ufw allow 80/tcp
+ 1455  apt-get install grafana
+ 1456  apt install grafana
+ 1457  apt-get update
+ 1458  apt-get install -y apt-transport-https
+ 1459  apt-get install -y software-properties-common wget
+ 1460  cd ansible/ch3_junos/
+ 1461  ansible-playbook pb_jnpr_basic_config.yml 
+ 1462  ls
+ 1463  ll
+ 1464  mkdir roles
+ 1465  mkdir roles/build_router_config
+ 1466  mkdir roles/tasks
+ 1467  mkdir roles/templates
+ 1468  nano  roles/tasks/build_config_dir.yml
+ 1469  mv roles/templates/ roles/build_router_config/
+ 1470  tree roles
+ 1471  mv roles/tasks/ roles/build_router_config/
+ 1472  tree roles
+ 1473  ll
+ 1474  ls
+ 1475  cd roles/
+ 1476  ls
+ 1477  cd build_router_config/
+ 1478  ls
+ 1479  ll tasks/
+ 1480  nano tasks/build_config_dir.yml
+ 1481  mkdir templates/junos
+ 1482  nano templates/junos/mgmt.j2
+ 1483  nano tasks/build_device_config.yml
+ 1484  nano tasks/main.yml
+ 1485  cd ..
+ 1486  nano pb_jnpr_net_build.yml
+ 1487  nano roles/build_router_config/tasks/build_device_config.yml 
+ 1488  rm roles/build_router_config/tasks/build_device_config.yml 
+ 1489  nano roles/build_router_config/tasks/build_device_config.yml 
+ 1490  nano pb_jnpr_net_build.yml
+ 1491  ansible-playbook pb_jnpr_net_build.yml
+ 1492  nano roles/build_router_config/tasks/build_config_dir.yml
+ 1493  nano roles/build_router_config/templates/junos/mgmt.j2
+ 1494  nano roles/build_router_config/tasks/build_device_config.yml
+ 1495  nano roles/build_router_config/tasks/main.yml
+ 1496  nano pb_jnpr_net_build.yml
+ 1497  ansible-playbook pb_jnpr_net_build.yml
+ 1498  tree configs/
+ 1499  cat configs/mxpe01.cfg
+ 1500  nano group_vars/all.yml
+ 1501  nano pb_jnpr_basic_config.yml
+ 1502  ansible-playbook pb_jnpr_basic_config.yml
+ 1503  nano group_vars/all.yml
+ 1504  nano pb_jnpr_basic_config.yml
+ 1505  ansible-playbook pb_jnpr_basic_config.yml
+ 1506  nano pb_jnpr_basic_config.yml
+ 1507  nano group_vars/all.yml
+ 1508  ansible-playbook pb_jnpr_basic_config.yml
+ 1509  nano roles/build_router_config/templates/junos/intf.j2
+ 1510  nano roles/build_router_config/tasks/build_device_config.yml
+ 1511  ansible-playbook pb_jnpr_net_build.yml
+ 1512  nano configs/mxp02.cfg 
+ 1513  nano roles/build_router_config/templates/junos/ospf.j2
+ 1514  nano roles/build_router_config/tasks/build_device_config.yml
+ 1515  ansible-playbook pb_jnpr_net_build.yml
+ 1516  cat configs/mxpe01.cfg
+ 1517  nano roles/build_router_config/templates/junos/mpls.j2
+ 1518  nano roles/build_router_config/tasks/build_device_config.yml
+ 1519  ansible-playbook pb_jnpr_net_build.yml
+ 1520  nano roles/build_router_config/tasks/build_device_config.yml
+ 1521  ansible-playbook pb_jnpr_net_build.yml
+ 1522  cat configs/mxpe01.cfg
+ 1523  cat configs/mxpe01.cfg 
+ 1524  nano roles/build_router_config/tasks/build_device_config.yml
+ 1525  nano group_vars/all.yml
+ 1526  ls
+ 1527  su eve
+ 1528  history 
+ 1529  cd ansible/ch3_junos/
+ 1530  ls
+ 1531  cd ..
+ 1532  git commit -m "late 05/01/2023"
+ 1533  git add .
+ 1534  git commit -m "late 05/01/2023"
+ 1535  git push --set-upstream origin master
+ 1536  apt install nginx
+ 1537  sudo wget https://github.com/grafana/loki/releases/download/v1.5.0/loki-linux-amd64.zip
+ 1538  sudo unzip -d /usr/local/bin/ loki-linux-amd64.zip
+ 1539  apt install unzip
+ 1540  sudo unzip -d /usr/local/bin/ loki-linux-amd64.zip
+ 1541  sudo mv /usr/local/bin/loki-linux-amd64 /usr/local/bin/loki
+ 1542  sudo chmod +x /usr/local/bin/loki
+ 1543  sudo mkdir /etc/loki
+ 1544  sudo nano /etc/loki/loki.yml
+ 1545  shutdown now
+ 1546  curl -O -L "https://github.com/grafana/loki/releases/download/v2.7.1/loki-linux-amd64.zip"
+ 1547  unzip "loki-linux-amd64.zip"
+ 1548  ls
+ 1549  chmod a+x "loki-linux-amd64"
+ 1550  sudo mv /usr/local/bin/loki-linux-amd64 /usr/local/bin/loki
+ 1551  ls
+ 1552  sudo mv loki-linux-amd64 /usr/local/bin/loki
+ 1553  sudo chmod +x /usr/local/bin/loki
+ 1554  sudo mkdir /etc/loki
+ 1555  rm -r /etc/loki 
+ 1556  sudo mkdir /etc/loki
+ 1557  sudo mkdir /var/lib/loki
+ 1558  sudo nano /etc/loki/loki.yml
+ 1559  sudo nano /etc/systemd/system/loki.service
+ 1560  systemctl start loki
+ 1561  systemctl status loki
+ 1562  netstat -ntaup
+ 1563  curl -O -L "https://github.com/grafana/loki/releases/download/v2.7.1/promtail-linux-amd64.zip"
+ 1564  sudo unzip -d /usr/local/bin/ promtail-linux-amd64.zip
+ 1565  sudo mv /usr/local/bin/promtail-linux-amd64 /usr/local/bin/promtail
+ 1566  sudo chmod +x /usr/local/bin/promtail
+ 1567  sudo mkdir /etc/promtail
+ 1568  sudo nano /etc/promtail/promtail.yml
+ 1569  sudo nano /etc/systemd/system/promtail.service
+ 1570  systemctl enable loki
+ 1571  systemctl start  promtail.service
+ 1572  systemctl status  promtail.service
+ 1573  systemctl enable  promtail.service
+ 1574  apt install grafana
+ 1575  sudo apt-get install -y apt-transport-https
+ 1576  sudo apt-get install -y software-properties-common wget
+ 1577  sudo wget -q -O /usr/share/keyrings/grafana.key https://apt.grafana.com/gpg.key
+ 1578  echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+ 1579  apt-get update
+ 1580  apt-get install grafana
+ 1581  systemctl start grafana-server
+ 1582  systemctl status grafana-server
+ 1583  /bin/systemctl enable grafana-server
+ 1584  history 
+ 1585  netstat -nstaup
+ 1586  netstat -ntaup
+ 1587  shutdown now
+ 1588  docker --version
+ 1589  shutdown now
+ 1590  cd ansible/ch3_junos/
+ 1591  nano pb_jnpr_net_build.yml
+ 1592  ansible-playbook pb_jnpr_net_build.yml
+ 1593  ls configs/mxp02.cfg 
+ 1594  cat configs/mxp02.cfg 
+ 1595  ls host_vars/
+ 1596  nano host_vars/xrpe03/bgp.yml
+ 1597  mkdir host_vars/xrpe03/
+ 1598  nano host_vars/xrpe03/bgp.yml
+ 1599  nano group_vars/all.yml 
+ 1600  ansible-playbook pb_jnpr_net_build.yml
+ 1601  nano configs/mxp01.cfg 
+ 1602  nano configs/mxp02.cfg 
+ 1603  nano configs/mxpe02.cfg 
+ 1604  nano configs/mxpe01.cfg 
+ 1605  ansible-playbook pb_jnpr_net_build.yml
+ 1606  pb_jnpr_net_build.yml
+ 1607  nano pb_jnpr_net_build.yml
+ 1608  nano pb_jnpr_basic_config.yml 
+ 1609  ansible-playbook pb_jnpr_basic_config.yml 
+ 1610  ansible-playbook pb_jnpr_net_build.yml
+ 1611  nano roles/build_router_config/tasks/build_device_config.yml 
+ 1612  ansible-playbook pb_jnpr_net_build.yml
+ 1613  nano roles/build_router_config/tasks/build_device_config.yml 
+ 1614  ansible-playbook pb_jnpr_net_build.yml
+ 1615  nano host_vars/mxp02/bgp.yml 
+ 1616  nano pb_jnpr_net_build.yml
+ 1617  nano roles/build_router_config/tasks/build_device_config.yml 
+ 1618  nano configs/mxp01.cfg 
+ 1619  nano pb_jnpr_net_build.yml
+ 1620  ansible-playbook pb_jnpr_net_build.yml
+ 1621  nano roles/build_router_config/tasks/build_device_config.yml 
+ 1622  ansible-playbook pb_jnpr_net_build.yml
+ 1623  ansible-playbook pb_jnpr_net_build.yml -l mxpe01 --check –diff
+ 1624  nano pb_jnpr_net_build.yml
+ 1625  nano ansible.cfg 
+ 1626  nano group_vars/all.yml
+ 1627  cat host_vars/mxpe01/bgp.yml
+ 1628  cat host_vars/mxpe02/bgp.yml
+ 1629  cat host_vars/mxp02/bgp.yml
+ 1630  cat host_vars/mxp01/bgp.yml
+ 1631  cat host_vars/mxpe01/bgp.yml
+ 1632  cat host_vars/mxp02/bgp.yml
+ 1633  cat host_vars/mxp01/bgp.yml
+ 1634  ls templates/junos 
+ 1635  ls
+ 1636  ls roles/
+ 1637  ls roles/build_router_config/
+ 1638  ls roles/build_router_config/templates/
+ 1639  ls roles/build_router_config/templates/junos/
+ 1640  nano roles/build_router_config/templates/junos/bgp.j2 
+ 1641  ls roles/build_router_config/templates/junos/
+ 1642  mkdir templates
+ 1643  mkdir templates/junos
+ 1644  nano templates/junos/bgp.j2
+ 1645  nano templates/junos/intf.j2
+ 1646  nano templates/junos/l3vpn.j2
+ 1647  nano templates/junos/mgmt.j2
+ 1648  nano templates/junos/mpls.j2
+ 1649  nano templates/junos/ospf.j2
+ 1650  nano templates/junos/routing.j2
+ 1651  ansible-playbook pb_jnpr_net_build.yml
+ 1652  nano pb_jnpr_net_build.yml
+ 1653  nano roles/build_router_config/tasks/build_device_config.yml 
+ 1654  ansible-playbook pb_jnpr_net_build.yml
+ 1655  nano group_vars/all.yml 
+ 1656  ansible-playbook pb_jnpr_net_build.yml
+ 1657  nano configs/mxp01.cfg 
+ 1658  nano host_vars/mxp02/bgp.yml 
+ 1659  ansible-playbook pb_jnpr_net_build.yml
+ 1660  ansible-playbook pb_jnpr_net_build.yml  -vvv
+ 1661  ansible --version
+ 1662  nano roles/build_router_config/templates/junos/bgp.j2
+ 1663  nano roles/build_router_config/tasks/main.yml 
+ 1664  nano host_vars/mxpe01/bgp.yml
+ 1665  nano roles/build_router_config/templates/junos/bgp.j2
+ 1666  nano roles/build_router_config/tasks/build_device_config.yml
+ 1667  ansible-playbook pb_jnpr_net_build.yml
+ 1668  nano pb_jnpr_net_build.yml
+ 1669  ansible-playbook pb_jnpr_net_build.yml --tags rollback -l mxpe01
+ 1670  ansible-playbook pb_jnpr_net_build.yml --tags rollback -l mxp01
+ 1671  ansible-playbook pb_jnpr_net_build.yml --tags rollback -l mxpe02
+ 1672  ls templates/junos/
+ 1673  nano templates/junos/l3vpn.j2 
+ 1674  nano l3vpn.yml
+ 1675  nano pb_junos_l3vpn.yml
+ 1676  ansible-playbook pb_junos_l3vpn.yml
+ 1677  nano pb_jnpr_facts.yml
+ 1678  shutdown now
+ 1679  cd ansible
+ 1680  git status
+ 1681  git add .
+ 1682  git status
+ 1683  git commit -m "morning 09/01/2023"
+ 1684  history 
+ 1685  git remote add origin https://github.com/azzeddineslimani/ansible.git
+ 1686  git push --set-upstream origin master
+ 1687  pip install ansible-builder --user
+ 1688  nano execution-environment.yml
+ 1689  nano ansible.cfg
+ 1690  nano requirements.yml
+ 1691  shutdown now
+ 1692  ls
+ 1693  mkdir e_env
+ 1694  cd ansible
+ 1695  ls
+ 1696  cd ch2_ios/
+ 1697  ls
+ 1698  cd ..
+ 1699  ls
+ 1700  cd ..
+ 1701  ls
+ 1702  mv execution-environment.yml e_env/
+ 1703  cd e_env/
+ 1704  ls
+ 1705  cd ..
+ 1706  mv ansible.cfg e_env/
+ 1707  ls
+ 1708  cd e_env/
+ 1709  ls
+ 1710  nano requirements.yml
+ 1711  nano requirements.txt
+ 1712  nano requirements.yml
+ 1713  nano requirements.txt
+ 1714  nano execution-environment.yml 
+ 1715  ansible-builder build --tag=my-custom-ee --verbosity 2
+ 1716  ansible-builder
+ 1717  pip install ansible-builder
+ 1718  sudo ansible-builder build --tag=my-custom-ee --verbosity 2
+ 1719  mkdir -p  ~/venv/ansible-builder
+ 1720  python3 -m venv ~/venv/ansible-builder
+ 1721  apt install python3.8-venv
+ 1722  python3 -m venv ~/venv/ansible-builder
+ 1723  source ~/venv/ansible-builder/bin/activate
+ 1724  pip3 install ansible-builder
+ 1725  ls
+ 1726  ansible-builder build --tag=my-custom-ee --verbosity 2
+ 1727  nano execution-environment.yml 
+ 1728  ansible-builder build --tag=my-custom-ee --verbosity 3
+ 1729  ls
+ 1730  cd context/
+ 1731  ls
+ 1732  shutdown now
+ 1733  cd ansible
+ 1734  cd ch2_ios/
+ 1735  ls
+ 1736  ansible-playbook pb_build_network.yml 
+ 1737  ifconfig
+ 1738  nano hosts
+ 1739  while true; do curl 127.0.0.1;done
+ 1740  shutdown now
+ 1741  ls
+ 1742  ll
+ 1743  cd ..
+ 1744  l
+ 1745  ll
+ 1746  cd ..
+ 1747  ll
+ 1748  systemctl status  promtail
+ 1749  systemctl status  loki
+ 1750  systemctl status grafana 
+ 1751  systemctl status grafana-server 
+ 1752  shutdown now
+ 1753  systemctl status  loki
+ 1754  systemctl status  promtail
+ 1755  systemctl status grafana-server 
+ 1756  while true; do curl 127.0.0.1;done
+ 1757  shutdown now
+ 1758  sudo pip3 install pynetbox
+ 1759  ls
+ 1760  cd ansible
+ 1761  ls
+ 1762  mkdir ch4_netbox
+ 1763  cd ch4_netbox/
+ 1764  nano hosts
+ 1765  mkdir group_vars
+ 1766  nano group_vars/all.yml
+ 1767  mkdir roles
+ 1768  ls
+ 1769  mkdir roles/build_netbox_db/tasks
+ 1770  mkdir roles/build_netbox_db/
+ 1771  mkdir roles/build_netbox_db/tasks
+ 1772  nano roles/build_netbox_db/tasks/main.yaml
+ 1773  mkdir roles/build_netbox_db/defaults
+ 1774  nano roles/build_netbox_db/defaults/main.yaml
+ 1775  nano pb_build_netbox_db.yml
+ 1776  ansible-playbook pb_build_netbox_db.yml 
+ 1777  ansible-playbook pb_build_netbox_db.yml -i hosts
+ 1778  nano hosts
+ 1779  nano ansible.cfg
+ 1780  ansible-playbook pb_build_netbox_db.yml
+ 1781  nano group_vars/all.yml 
+ 1782  ansible-playbook pb_build_netbox_db.yml
+ 1783  nano roles/build_netbox_db/defaults/main.yaml
+ 1784  nano roles/build_netbox_db/tasks/main.yaml
+ 1785  ping 192.168.19.132
+ 1786  nano group_vars/all.yml 
+ 1787  curl https://192.168.19.132
+ 1788  ansible-playbook pb_build_netbox_db.yml
+ 1789  ansible-playbook pb_build_netbox_db.yml -v
+ 1790  ansible-playbook pb_build_netbox_db.yml -vV
+ 1791  ansible-playbook pb_build_netbox_db.yml -vv
+ 1792  ansible-playbook pb_build_netbox_db.yml -vvv
+ 1793  nano hosts 
+ 1794  nano pb_build_netbox_db.yml
+ 1795  nano hosts 
+ 1796  ansible-playbook pb_build_netbox_db.yml -vv
+ 1797  nano roles/build_netbox_db/tasks/main.yaml 
+ 1798  nano group_vars/
+ 1799  nano group_vars/all.yml 
+ 1800  ansible-playbook pb_build_netbox_db.yml -vv
+ 1801  nano hosts 
+ 1802  ansible-playbook pb_build_netbox_db.yml -vv
+ 1803  ansible-playbook pb_build_netbox_db.yml
+ 1804  nano hosts 
+ 1805  ansible-playbook pb_build_netbox_db.yml
+ 1806  nano group_vars/all.yml 
+ 1807  ansible-playbook pb_build_netbox_db.yml
+ 1808  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1809  nano group_vars/all.yml 
+ 1810  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1811  ansible-galaxy collection install netbox.netbox --force
+ 1812  cd ansible/ch4_netbox/
+ 1813  ls
+ 1814  ansible- 
+ 1815  ansible-playbook pb_build_netbox_db.yml 
+ 1816  sudo ufw allow 443
+ 1817  sudo ufw allow 80
+ 1818  ansible-playbook pb_build_netbox_db.yml 
+ 1819  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1820  ansible-doc netbox.netbox.netbox_device
+ 1821  curl http://192.168.19.132
+ 1822  curl https://192.168.19.132
+ 1823  ansible-galaxy collection install netbox.netbox
+ 1824  ansible-doc netbox.netbox.netbox_device
+ 1825  clear
+ 1826  cd ansible
+ 1827  cd ch4_netbox/
+ 1828  ls
+ 1829  nano group_vars/all.yml 
+ 1830  nano group_vars/all.yml
+ 1831  curl http://192.168.19.132
+ 1832  curl https://192.168.19.132
+ 1833  nano group_vars/all.yml
+ 1834  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1835  ansible-playbook pb_build_netbox_db.yml 
+ 1836  nano group_vars/all.yml
+ 1837  ansible-playbook pb_build_netbox_db.yml 
+ 1838  nano group_vars/all.yml
+ 1839  ansible-playbook pb_build_netbox_db.yml 
+ 1840  nano group_vars/all.yml
+ 1841  ansible-playbook pb_build_netbox_db.yml 
+ 1842  nano roles/build_netbox_db/tasks/main.yaml 
+ 1843  ansible-playbook pb_build_netbox_db.yml 
+ 1844  nano roles/build_netbox_db/tasks/main.yaml 
+ 1845  ansible-playbook pb_build_netbox_db.yml 
+ 1846  nano pb_build_netbox_db.yml 
+ 1847  ansible-playbook pb_build_netbox_db.yml 
+ 1848  nano pb_build_netbox_db.yml 
+ 1849  ansible-playbook pb_build_netbox_db.yml 
+ 1850  nano pb_build_netbox_db.yml 
+ 1851  nano roles/build_netbox_db/tasks/main.yaml 
+ 1852  nano pb_build_netbox_db.yml 
+ 1853  ansible-playbook pb_build_netbox_db.yml 
+ 1854  nano group_vars/all.yml 
+ 1855  nano group_vars/leaf.yml
+ 1856  nano 
+ 1857  nano roles/build_netbox_db/tasks/create_device_vendors.yml
+ 1858  nano roles/build_netbox_db/tasks/main.yaml 
+ 1859  - name: Create NetBox Device Vendors
+ 1860  nano roles/build_netbox_db/tasks/create_device_types.yml
+ 1861  nano roles/build_netbox_db/tasks/main.yaml 
+ 1862  nano roles/build_netbox_db/tasks/create_device_roles.yml
+ 1863  nano roles/build_netbox_db/tasks/main.yaml 
+ 1864  nano roles/build_netbox_db/tasks/create_device.yml
+ 1865  nano roles/build_netbox_db/tasks/main.yaml 
+ 1866  ansible-playbook pb_build_netbox_db.yml 
+ 1867  nano pb_build_netbox_db.yml 
+ 1868  ansible-playbook pb_build_netbox_db.yml 
+ 1869  nano pb_build_netbox_db.yml 
+ 1870  nano roles/build_netbox_db/tasks/main.yaml 
+ 1871  nano group_vars/all.yml 
+ 1872  ansible-playbook pb_build_netbox_db.yml 
+ 1873  nano hosts 
+ 1874  ansible-playbook pb_build_netbox_db.yml 
+ 1875  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1876  root@eve:/home/eve# sudo systemctl stop netbox
+ 1877  root@eve:/home/eve# sudo systemctl stop nginx
+ 1878  root@eve:/home/eve#
+ 1879  root@eve:/home/eve# sudo systemctl restart netbox
+ 1880  root@eve:/home/eve# sudo systemctl restart nginx
+ 1881  Job for nginx.service failed because the control process exited with error code.
+ 1882  See "systemctl status nginx.service" and "journalctl -xe" for details.
+ 1883  root@eve:/home/eve#
+ 1884  root@eve:/home/eve# sudo systemctl stop netbox
+ 1885  root@eve:/home/eve# sudo systemctl stop nginx
+ 1886  root@eve:/home/eve#
+ 1887  root@eve:/home/eve# sudo systemctl restart netbox
+ 1888  root@eve:/home/eve# sudo systemctl restart nginx
+ 1889  Job for nginx.service failed because the control process exited with error code.
+ 1890  See "systemctl status nginx.service" and "journalctl -xe" for details.
+ 1891  root@eve:/home/eve#
+ 1892  curl -k https://192.168.19.132
+ 1893  clear
+ 1894  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1895  nano group_vars/all.yml 
+ 1896  nano roles/build_netbox_db/defaults/
+ 1897  nano roles/build_netbox_db/defaults/main.yaml 
+ 1898  nano roles/build_netbox_db/tasks/main.yaml 
+ 1899  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1900  nano group_vars/all.yml 
+ 1901  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1902  nano group_vars/all.yml 
+ 1903  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1904  nano group_vars/all.yml 
+ 1905  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1906  nano group_vars/all.yml 
+ 1907  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1908  nano group_vars/all.yml 
+ 1909  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1910  ls
+ 1911  nano ansible.cfg 
+ 1912  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1913  nano group_vars/all.yml 
+ 1914  nano roles/build_netbox_db/defaults/
+ 1915  nano roles/build_netbox_db/defaults/main.yaml 
+ 1916  nano roles/build_netbox_db/tasks/
+ 1917  nano roles/build_netbox_db/tasks/main.yaml 
+ 1918  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1919  nano roles/build_netbox_db/tasks/main.yaml 
+ 1920  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1921  shutdown now
+ 1922  cd ansible
+ 1923  cd ch4_netbox/
+ 1924  ls
+ 1925  ping 192.168.19.143
+ 1926  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1927  ls
+ 1928  nano group_vars/all.yml 
+ 1929  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1930  nano group_vars/all.yml 
+ 1931  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1932  nano group_vars/all.yml 
+ 1933  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1934  nano pb_build_netbox_db.yml
+ 1935  nano roles/build_netbox_db/tasks/create_device_vendors.yml 
+ 1936  nano group_vars/all.yml 
+ 1937  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1938  nano roles/build_netbox_db/tasks/main.yaml 
+ 1939  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1940  nano group_vars/all.yml 
+ 1941  nano roles/build_netbox_db/tasks/main.yaml 
+ 1942  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1943  nano roles/build_netbox_db/tasks/create_device.yml
+ 1944  nano group_vars/all.yml 
+ 1945  nano roles/build_netbox_db/tasks/create_device.yml
+ 1946  nano roles/build_netbox_db/tasks/create_device.yml
+ 1947  nano group_vars/spine.yml 
+ 1948  nano roles/build_netbox_db/tasks/create_device_vendors.yml
+ 1949  nano roles/build_netbox_db/tasks/main.yaml 
+ 1950  nano roles/build_netbox_db/tasks/create_device.yml 
+ 1951  nano roles/build_netbox_db/tasks/main.yaml 
+ 1952  nano group_vars/arista.yml
+ 1953  ansible-playbook pb_build_netbox_db.yml
+ 1954  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1955  nano roles/build_netbox_db/tasks/main.yaml 
+ 1956  nano group_vars/leaf.yml 
+ 1957  nano group_vars/spine.yml 
+ 1958  nano group_vars/leaf.yml 
+ 1959  nano roles/build_netbox_db/tasks/create_device.yml 
+ 1960  nano roles/build_netbox_db/tasks/main.yaml 
+ 1961  cd ansible
+ 1962  ls
+ 1963  mv loki-linux-amd64.zip /home/eve/
+ 1964  git status 
+ 1965  git add .
+ 1966  git push -u origin master
+ 1967  git commit -m "17/01/2022 netbox"
+ 1968  git push -u origin master
+ 1969  shutdown now
+ 1970  ls
+ 1971  cd e_env/
+ 1972  ls
+ 1973  docker --version
+ 1974  history 
+ 1975  history | grep builder
+ 1976  llnano context/Dockerfile 
+ 1977  nano context/Dockerfile 
+ 1978  history > commands.txt

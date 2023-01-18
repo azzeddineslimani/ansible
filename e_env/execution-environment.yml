@@ -1,0 +1,18 @@
+---
+version: 1
+
+build_arg_defaults:
+  EE_BASE_IMAGE: 'quay.io/ansible/ansible-runner@sha256:001a4bde411be863d54c1d293f3d2e7b0ff0e67ef5d7b2f9f7fb56b61694f4e8'
+
+ansible_config: 'ansible.cfg'
+
+dependencies:
+  galaxy: requirements.yml
+  python: requirements.txt
+#  system: bindep.txt
+
+additional_build_steps:
+  prepend: |
+    RUN pip install ansible-pylibssh    
+  append:
+    - RUN echo This is a post-install command!
