@@ -1,0 +1,36 @@
+- name: Create Fabric IPs
+  netbox_ip_address:
+    netbox_token: "{{ netbox_token }}"
+    netbox_url: "{{ netbox_url }}"
+    data:
+      address: "{{ item.ip }}"
+      assigned_object:
+        name: "{{ item.port }}"
+        device: "{{ inventory_hostname }}"
+    state: "{{ netbox_state }}"
+  loop: "{{ p2p_ip[inventory_hostname] }}"
+  tags: netbox_ip
+
+- name: Create Loopback IPs
+  netbox_ip_address:
+    netbox_token: "{{ netbox_token }}"
+    netbox_url: "{{ netbox_url }}"
+    data:
+      address: "{{ lo_ip[inventory_hostname].ip }}"
+      assigned_object:
+        name: "Loopback0"
+        device: "{{ inventory_hostname }}"
+    state: "{{ netbox_state }}"
+  tags: netbox_ip
+
+- name: Create Managment IPs
+  netbox_ip_address:
+    netbox_token: "{{ netbox_token }}"
+    netbox_url: "{{ netbox_url }}"
+    data:
+      address: "{{ mgmt_net[inventory_hostname].ip }}"
+      assigned_object:
+        name: "{{ mgmt_net[inventory_hostname].port }}"
+        device: "{{ inventory_hostname }}"
+    state: "{{ netbox_state }}"
+  tags: netbox_ip

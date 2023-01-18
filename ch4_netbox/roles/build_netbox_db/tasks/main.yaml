@@ -8,7 +8,7 @@
       description: "{{ item.description | default(omit) }}"
       physical_address: "{{ item.location | default(omit) }}"
     state: "{{ netbox_state }}"
-    validate_certs: "false"
+#    validate_certs: "false"
   loop: "{{ sites }}" 
   when: sites is defined
   run_once: yes
@@ -41,3 +41,12 @@
 - name: Create NetBox Device 
   include_tasks: create_device.yml
   tags: netbox_devices
+
+- name: Create NetBox Device Interfaces
+  include_tasks: create_device_intf.yml
+  tags: netbox_intfs
+- name: Create NetBox Device Interfaces IP Address
+  include_tasks: create_device_intf_ip.yml
+  tags: netbox_ip
+
+

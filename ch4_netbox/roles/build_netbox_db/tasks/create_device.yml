@@ -6,9 +6,9 @@
       device_type: "{{ device_model }}"
       status: Active
       site: "{{ inventory_hostname.split('-')[0] }}"
+     # primary_ip4: "{{ ansible_host }}" (unable to resolve the ID of the primary IP address)
     netbox_token: "{{ netbox_token }}"
     netbox_url: "{{ netbox_url }}"
     state: "{{ netbox_state }}"
   register: netbox_device
   tags: netbox_devices
-
