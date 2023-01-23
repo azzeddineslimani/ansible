@@ -1,0 +1,14 @@
+---
+plugin: netbox.netbox.nb_inventory
+api_endpoint: http://192.168.19.143:8000
+token: ad4f7e87dd933abf5ff33900bf01d14bf0078581
+interfaces: true
+#config_context: true
+group_by:
+  - device_roles
+  - sites
+device_query_filters:
+  - status: 'active'
+#fetch_all: false
+#device_query_filters:
+#  - has_primary_ip: 'true'
