@@ -7,8 +7,8 @@ interfaces: true
 group_by:
   - device_roles
   - sites
-device_query_filters:
-  - status: 'active'
+#device_query_filters:
+#x  - status: 'active'
 #fetch_all: false
 #device_query_filters:
 #  - has_primary_ip: 'true'

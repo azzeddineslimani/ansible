@@ -1,0 +1,202 @@
+    1  ls
+    2  sudo i
+    3  sudo su
+    4  exit
+    5  ifconfig
+    6  docker --version
+    7  docker run hello-world
+    8  sudo su
+    9  kubectl get nodes
+   10  sudo su
+   11  mkdir -p $HOME/.kube
+   12  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   13  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   14  kubectl get nodes
+   15  ll /etc/kubernetes/
+   16  scp -r $HOME/.kube eve@192.168.19.136:/home/eve
+   17  scp -r $HOME/.kube eve@192.168.19.136:/
+   18  scp -r $HOME/.kube root@192.168.19.136:/
+   19  scp -r $HOME/.kube root@192.168.19.136:/root
+   20  kubectl get nodes
+   21  sudo su
+   22  kubectl get nodes
+   23  reboot 
+   24  sudo reboot 
+   25  kubectl get nodes
+   26  kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+   27  kubectl get nodes
+   28  kubectl describe node node1
+   29  kubectl get nodes
+   30  kubectl create deployment my-nginx --image=nginx
+   31  kubectl delete deployement 
+   32  kubectl delete deployment 
+   33  kubectl delete deployment my-nginx
+   34  mkdir base
+   35  cd base
+   36  nano deployment.yaml
+   37  nano service.yaml
+   38  nano kustomization.yaml
+   39  cd ..
+   40  kubectl kustomize k8s
+   41  kubectl kustomize base
+   42  kubectl apply -k base
+   43  kubectl kustomize k8s
+   44  kubectl delete -k base
+   45  kubectl apply -k base
+   46  kubectl delete -k base
+   47  l
+   48  ll
+   49  ll base
+   50  sudo shutdown 
+   51  kubectl get nodes
+   52  mkdir awx
+   53  cd awx
+   54  mkdir base
+   55  ls
+   56  mv troubleshooting.txt base
+   57  ls
+   58  mv public-static-pvc.yml base
+   59  mv awx-instance-deployment.yml base
+   60  mv awx-demo.yaml base
+   61  ls
+   62  kubectl get nodes
+   63  kubectl get nodes
+   64  sudo reboot
+   65  sudo su
+   66  kubectl get nodes
+   67  ping 192.168.19.136
+   68  cd awx
+   69  ls
+   70  kubectl apply -k kustomization.yaml 
+   71  mkdir kustomize
+   72  mv kustomization.yaml kustomiz
+   73  l
+   74  ll
+   75  mv kustomiz kustomization.yaml 
+   76  mv kustomization.yaml kustomize/
+   77  ll
+   78  kubectl apply -k kustomize/
+   79  cd kustomize/
+   80  ls
+   81  nano kustomization.yaml 
+   82  cd ..
+   83  kubectl apply -k kustomize/
+   84  nano kustomize/kustomization.yaml 
+   85  kubectl apply -k kustomize/
+   86  kubectl kustomize build kustomize/
+   87  kubectl build kustomize/
+   88  kustomize build kustomize/
+   89  nano kustomize/kustomization.yaml 
+   90  ping 8.8.8.8
+   91  kubectl apply -k kustomize
+   92  yum intsall git
+   93  yum install git
+   94  sudo yum install git
+   95  git clone github.com/ansible/awx-operator/config/default?ref=1.1.3
+   96  git clone github.com/ansible/awx-operator/config/default?ref=1.1.2
+   97  ls
+   98  cd kustomize/
+   99  kustomize build . | kubectl apply -f -
+  100  curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"
+  101  curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
+  102  ls
+  103  sudo mv kustomize /usr/local/bin
+  104  ls
+  105  kustomize --help
+  106  kustomize build . | kubectl apply -f -
+  107  kubectl get pods -n awx
+  108  kubectl config set-context --current --namespace=awx
+  109  ls
+  110  cd ..
+  111  ls
+  112  cd base/
+  113  ls
+  114  nano awx-demo.yaml 
+  115  kubectl describe nodes
+  116  ls
+  117  cd ..
+  118  ls
+  119  ll
+  120  pwd
+  121  cd kustomize/
+  122  ls
+  123  nano kustomization.yaml 
+  124  kustomize build . | kubectl apply -f -
+  125  nano n
+  126  ls
+  127  nano awx-demo.yaml 
+  128  kustomize build . | kubectl apply -f -
+  129  nano kustomization.yaml 
+  130  kustomize build . | kubectl apply -f -
+  131  kubectl get pods -l "app.kubernetes.io/managed-by=awx-operator"
+  132  kubectl get pvc 
+  133  vkubectl get pv
+  134  kubectl get pv
+  135  kubectl apply -k kustomization.yaml 
+  136  cd ..
+  137  kubectl apply -k kustomize/
+  138  kubectl delete -k kustomize/
+  139  kubectl get pv
+  140  kubectl get pvc 
+  141  kubectl get pods -l "app.kubernetes.io/managed-by=awx-operator"
+  142  kubectl get pods
+  143  ls
+  144  cd base/
+  145  ls
+  146  cd ..
+  147  ls
+  148  cd kustomize/
+  149  ls
+  150  nano kustomization.yaml 
+  151  kustomize build . | kubectl apply -f -
+  152  kubectl config set-context --current --namespace=awx
+  153  kubectl get pods
+  154  cd ..
+  155  cd base/
+  156  ls
+  157  nano public-static-pvc.yml 
+  158  kubectl apply -f public-static-pvc.yml 
+  159  kubectl get pvc
+  160  ls
+  161  nano awx-deploy.yml
+  162  kubectl apply -f awx-deploy.yml
+  163  kubectl get pvc
+  164  kubectl get sc
+  165     
+  166  nano awx-deploy.yml
+  167  kubectl get pvc
+  168  cd ..
+  169  cd kustomize/
+  170  ls
+  171  kubectl delete -k kustomize/
+  172  cd ..
+  173  kubectl delete -k kustomize/
+  174  kubectl get pods
+  175  cd kustomize/
+  176  cd ..
+  177* 
+  178  sudo fdisk -l
+  179  fdisk /dev/sdb
+  180  sudo su 
+  181  ls
+  182  kustomize --help
+  183  sudo reboot
+  184  kubectl get pods
+  185  kubectl get nodes
+  186  kubectl get pods
+  187  kustomize --help
+  188  ls
+  189  cd awx/
+  190  cd kustomize/
+  191  ls
+  192  kustomize build . | kubectl apply -f -
+  193  kubectl get pods
+  194  ll
+  195  nano kustomization.yaml 
+  196  cd ..
+  197  cd kustomize/
+  198  kustomize build . | kubectl apply -f -
+  199  kubectl get pods
+  200  kubectl get pvc
+  201  kubectl get svc -l "app.kubernetes.io/managed-by=awx-operator"
+  202  history >> commands.txt

@@ -1,0 +1,12 @@
+#Node : Not ready 
+   33  kubectl describe node
+   34  kubectl get pods -n kube-system
+   35  systemctl status kubelet
+   36  journalctl -u kubelet
+   37  systemctl start kubelet
+   38  systemctl status kubelet
+   39  history
+   40  systemctl enable kubelet
+# note: use kustemize natively with kubectl
+# base et le nom du dossier contant nos fichier deployement.yaml service.yaml kustomization.yaml
+kubectl kustomize base
