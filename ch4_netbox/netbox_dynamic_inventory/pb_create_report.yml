@@ -8,12 +8,12 @@
       blockinfile:
         block: |
             netbox_data:
+            {% set mgmt_ip = "toto" %}
             {% for node in ansible_play_hosts %}
-                {% set mgmt_ip = "" %}
-                {% for interfaces in hostvars[node].interfaces if interfaces.mgmt_only %}
-                    {% set mgmt_ip = interfaces.ip_addresses[0].address %}
-                {% endfor %}
-                { node: {{ node }}, type: {{ hostvars[node].device_types[0] }}, mgmt_ip: {{ mgmt_ip }} }
+            {% for interfaces in hostvars[node].interfaces if interfaces.mgmt_only == True %}
+            {% set mgmt_ip = interfaces.ip_addresses.address %}
+            {% endfor %}
+            { node: {{ node }}, type: {{ hostvars[node].device_types[0] }}, mgmt_ip: {{ mgmt_ip }} }
             {% endfor %}
         path: ./netbox_report.yaml
         create: yes

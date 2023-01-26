@@ -1,0 +1,42 @@
+---
+- name: Create Report from Netbox Data
+  hosts: all
+  gather_facts: no
+  connection: local
+  tasks:
+    # - debug: var=play_hosts
+    #   run_once: yes
+
+    - name: Read netbox Data
+      include_vars: netbox_data.yml
+      run_once: yes
+      
+    - name: Get Data from Netbox
+      uri:
+        url: "{{ netbox_url }}/api/dcim/interfaces/?device={{ inventory_hostname }}"
+        method: GET
+        headers:
+          Authorization: "Token {{ netbox_token }}"
+          Accept: 'application/json'
+        return_content: yes
+        body_format: json
+        status_code: [200, 201]
+      register: netbox_interfaces
+      delegate_to: localhost
+      run_once: yes
+
+    # - debug: var=netbox_interfaces
+    #   run_once: yes
+
+#    - name: Push Config
+#      eos_config:
+#        lines:
+#          - description {{ port.description }} 
+#        parent: interface {{ port.name }}
+#      loop: "{{ netbox_interfaces.json.results }}"
+#      loop_control: 
+#        loop_var: port
+#      vars:
+#        ansible_connection: network_cli
+#        ansible_network_os: eos
+

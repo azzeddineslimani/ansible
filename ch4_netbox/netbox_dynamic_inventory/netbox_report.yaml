@@ -1,15 +1,15 @@
 # BEGIN ANSIBLE MANAGED BLOCK
 netbox_data:
-                        { node: dc1-leaf01, type: 7020sr, mgmt_ip:  }
-                        { node: dc1-leaf02, type: 7020sr, mgmt_ip:  }
-                        { node: dc1-spine01, type: 7050cx3, mgmt_ip:  }
-                        { node: dc1-spine02, type: 7050cx3, mgmt_ip:  }
-                        { node: dc2-leaf01, type: 7020sr, mgmt_ip:  }
-                        { node: dc2-leaf02, type: 7020sr, mgmt_ip:  }
-                        { node: dc2-spine01, type: 7050cx3, mgmt_ip:  }
-                        { node: dc2-spine02, type: 7050cx3, mgmt_ip:  }
-                        { node: dc3-leaf01, type: 7020sr, mgmt_ip:  }
-                        { node: dc3-leaf02, type: 7020sr, mgmt_ip:  }
-                        { node: dc3-spine01, type: 7050cx3, mgmt_ip:  }
-                        { node: dc3-spine02, type: 7050cx3, mgmt_ip:  }
+{ node: dc1-leaf01, type: 7020sr, mgmt_ip: toto }
+{ node: dc1-leaf02, type: 7020sr, mgmt_ip: toto }
+{ node: dc1-spine01, type: 7050cx3, mgmt_ip: toto }
+{ node: dc1-spine02, type: 7050cx3, mgmt_ip: toto }
+{ node: dc2-leaf01, type: 7020sr, mgmt_ip: toto }
+{ node: dc2-leaf02, type: 7020sr, mgmt_ip: toto }
+{ node: dc2-spine01, type: 7050cx3, mgmt_ip: toto }
+{ node: dc2-spine02, type: 7050cx3, mgmt_ip: toto }
+{ node: dc3-leaf01, type: 7020sr, mgmt_ip: toto }
+{ node: dc3-leaf02, type: 7020sr, mgmt_ip: toto }
+{ node: dc3-spine01, type: 7050cx3, mgmt_ip: toto }
+{ node: dc3-spine02, type: 7050cx3, mgmt_ip: toto }
 # END ANSIBLE MANAGED BLOCK
