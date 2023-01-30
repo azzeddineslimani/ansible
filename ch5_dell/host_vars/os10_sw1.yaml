@@ -1,0 +1,12 @@
+hostname: access01
+# Parameters for connection type network_cli
+ansible_ssh_user: admin
+ansible_ssh_pass: admin
+ansible_network_os: dellemc.os10.os10
+# Create vlan100 and delete vlan888
+os10_vlan:
+    vlan 10:
+      description: "Blue"
+      state: present
+    #vlan 888:
+      #state: absent

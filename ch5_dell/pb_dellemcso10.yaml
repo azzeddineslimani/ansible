@@ -1,0 +1,75 @@
+---
+- hosts: all
+  gather_facts: no
+  name: Sample IOS config for Ansible
+  connection: network_cli
+#  collections:
+#    - dellemc.os10
+  tasks:
+    - name: run show version on remote devices
+      dellemc.os10.os10_command:
+        commands: show version
+
+    - name: run show version and check to see if output contains OS10
+      dellemc.os10.os10_command:
+        commands: show version
+        wait_for: result[0] contains OS10
+      register: show_ver
+    - debug: var=show_ver
+
+      
+    - name: run multiple commands on remote nodes et affiche le resultat
+      dellemc.os10.os10_command:
+        commands:
+          - show version
+          - show interface
+#      register: show_ver1
+#    - debug: var=show_ver1
+
+
+    - name: change hostname
+      dellemc.os10.os10_config:
+        lines: ['hostname {{ inventory_hostname }}']
+#    - name: run multiple commands and evaluate the output
+#      dellemc.os10.os10_config:
+#        lines:
+#          - 10 permit ip host 1.1.1.1 any log
+#          - 20 permit ip host 2.2.2.2 any log
+#          - 30 permit ip host 3.3.3.3 any log
+#          - 40 permit ip host 4.4.4.4 any log
+#          - 50 permit ip host 5.5.5.5 any log
+#        parents: ['ip access-list test']
+#        before: ['no ip access-list test']
+#        match: exact
+
+#    - name: run multiple commands and evaluate the output
+#      dellemc.os10.os10_config:
+#        lines:
+#          - 10 permit ip host 1.1.1.1 any log
+#          - 20 permit ip host 2.2.2.2 any log
+#          - 30 permit ip host 3.3.3.3 any log
+#          - 40 permit ip host 4.4.4.4 any log
+#        parents: ['ip access-list test']
+#        before: ['no ip access-list test']
+#        replace: block
+
+    - name: backup config
+      dellemc.os10.os10_config:
+        lines: ['hostname {{ inventory_hostname }}']
+        backup: yes
+        backup_options:
+          filename: backup.cfg
+          dir_path: /home/eve/backup
+    - name: vlan 100
+      dellemc.os10.os10_config:
+        lines: ['virtual-network 100']
+    - name: switchport
+      dellemc.os10.os10_config:
+        lines: ['switchport mode trunk']
+        parents: ['interface ethernet1/1/1']
+        before: ['no interface ethernet1/1/1']
+    - name: eth1/1/1 to VLAN 100      
+      dellemc.os10.os10_config:
+        lines: ['member-interface ethernet1/1/1 vlan-tag 100']
+        parents: ['virtual-network 100']
+        before: ['no virtual-network 100']

@@ -1,0 +1,27 @@
+hostname: access01
+# Parameters for connection type network_cli
+ansible_ssh_user: admin
+ansible_ssh_pass: admin
+ansible_network_os: dellemc.os10.os10
+
+
+dellos_cfg_generate: True
+build_dir: /home/user/config
+ansible_ssh_user: admin
+ansible_ssh_pass: admin
+
+dellos_logging:
+  logging:
+  - ip: 1.1.1.1
+    state: present
+
+dellos_users:
+  - username: u1
+    password: test@2468
+    role: sysadmin
+    privilege: 0
+    state: present
+
+dellos_ntp:
+  server:
+  - ip: 3.3.3.3

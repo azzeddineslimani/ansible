@@ -1,0 +1,9 @@
+---
+- name: "Ping"
+  hosts: all  
+  #become: yes
+  #ansible_become_method: enable  
+  connection: ansible.netcommon.network_cli
+  tasks:
+    - name: Test reachability to 192.168.198.147
+      ping:

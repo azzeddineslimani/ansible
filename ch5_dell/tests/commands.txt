@@ -1,0 +1,1000 @@
+ 1034  systemctl start loki
+ 1035  systemctl status loki
+ 1036  netstat -ntaup
+ 1037  curl -O -L "https://github.com/grafana/loki/releases/download/v2.7.1/promtail-linux-amd64.zip"
+ 1038  sudo unzip -d /usr/local/bin/ promtail-linux-amd64.zip
+ 1039  sudo mv /usr/local/bin/promtail-linux-amd64 /usr/local/bin/promtail
+ 1040  sudo chmod +x /usr/local/bin/promtail
+ 1041  sudo mkdir /etc/promtail
+ 1042  sudo nano /etc/promtail/promtail.yml
+ 1043  sudo nano /etc/systemd/system/promtail.service
+ 1044  systemctl enable loki
+ 1045  systemctl start  promtail.service
+ 1046  systemctl status  promtail.service
+ 1047  systemctl enable  promtail.service
+ 1048  apt install grafana
+ 1049  sudo apt-get install -y apt-transport-https
+ 1050  sudo apt-get install -y software-properties-common wget
+ 1051  sudo wget -q -O /usr/share/keyrings/grafana.key https://apt.grafana.com/gpg.key
+ 1052  echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+ 1053  apt-get update
+ 1054  apt-get install grafana
+ 1055  systemctl start grafana-server
+ 1056  systemctl status grafana-server
+ 1057  /bin/systemctl enable grafana-server
+ 1058  history 
+ 1059  netstat -nstaup
+ 1060  netstat -ntaup
+ 1061  shutdown now
+ 1062  docker --version
+ 1063  shutdown now
+ 1064  cd ansible/ch3_junos/
+ 1065  nano pb_jnpr_net_build.yml
+ 1066  ansible-playbook pb_jnpr_net_build.yml
+ 1067  ls configs/mxp02.cfg 
+ 1068  cat configs/mxp02.cfg 
+ 1069  ls host_vars/
+ 1070  nano host_vars/xrpe03/bgp.yml
+ 1071  mkdir host_vars/xrpe03/
+ 1072  nano host_vars/xrpe03/bgp.yml
+ 1073  nano group_vars/all.yml 
+ 1074  ansible-playbook pb_jnpr_net_build.yml
+ 1075  nano configs/mxp01.cfg 
+ 1076  nano configs/mxp02.cfg 
+ 1077  nano configs/mxpe02.cfg 
+ 1078  nano configs/mxpe01.cfg 
+ 1079  ansible-playbook pb_jnpr_net_build.yml
+ 1080  pb_jnpr_net_build.yml
+ 1081  nano pb_jnpr_net_build.yml
+ 1082  nano pb_jnpr_basic_config.yml 
+ 1083  ansible-playbook pb_jnpr_basic_config.yml 
+ 1084  ansible-playbook pb_jnpr_net_build.yml
+ 1085  nano roles/build_router_config/tasks/build_device_config.yml 
+ 1086  ansible-playbook pb_jnpr_net_build.yml
+ 1087  nano roles/build_router_config/tasks/build_device_config.yml 
+ 1088  ansible-playbook pb_jnpr_net_build.yml
+ 1089  nano host_vars/mxp02/bgp.yml 
+ 1090  nano pb_jnpr_net_build.yml
+ 1091  nano roles/build_router_config/tasks/build_device_config.yml 
+ 1092  nano configs/mxp01.cfg 
+ 1093  nano pb_jnpr_net_build.yml
+ 1094  ansible-playbook pb_jnpr_net_build.yml
+ 1095  nano roles/build_router_config/tasks/build_device_config.yml 
+ 1096  ansible-playbook pb_jnpr_net_build.yml
+ 1097  ansible-playbook pb_jnpr_net_build.yml -l mxpe01 --check –diff
+ 1098  nano pb_jnpr_net_build.yml
+ 1099  nano ansible.cfg 
+ 1100  nano group_vars/all.yml
+ 1101  cat host_vars/mxpe01/bgp.yml
+ 1102  cat host_vars/mxpe02/bgp.yml
+ 1103  cat host_vars/mxp02/bgp.yml
+ 1104  cat host_vars/mxp01/bgp.yml
+ 1105  cat host_vars/mxpe01/bgp.yml
+ 1106  cat host_vars/mxp02/bgp.yml
+ 1107  cat host_vars/mxp01/bgp.yml
+ 1108  ls templates/junos 
+ 1109  ls
+ 1110  ls roles/
+ 1111  ls roles/build_router_config/
+ 1112  ls roles/build_router_config/templates/
+ 1113  ls roles/build_router_config/templates/junos/
+ 1114  nano roles/build_router_config/templates/junos/bgp.j2 
+ 1115  ls roles/build_router_config/templates/junos/
+ 1116  mkdir templates
+ 1117  mkdir templates/junos
+ 1118  nano templates/junos/bgp.j2
+ 1119  nano templates/junos/intf.j2
+ 1120  nano templates/junos/l3vpn.j2
+ 1121  nano templates/junos/mgmt.j2
+ 1122  nano templates/junos/mpls.j2
+ 1123  nano templates/junos/ospf.j2
+ 1124  nano templates/junos/routing.j2
+ 1125  ansible-playbook pb_jnpr_net_build.yml
+ 1126  nano pb_jnpr_net_build.yml
+ 1127  nano roles/build_router_config/tasks/build_device_config.yml 
+ 1128  ansible-playbook pb_jnpr_net_build.yml
+ 1129  nano group_vars/all.yml 
+ 1130  ansible-playbook pb_jnpr_net_build.yml
+ 1131  nano configs/mxp01.cfg 
+ 1132  nano host_vars/mxp02/bgp.yml 
+ 1133  ansible-playbook pb_jnpr_net_build.yml
+ 1134  ansible-playbook pb_jnpr_net_build.yml  -vvv
+ 1135  ansible --version
+ 1136  nano roles/build_router_config/templates/junos/bgp.j2
+ 1137  nano roles/build_router_config/tasks/main.yml 
+ 1138  nano host_vars/mxpe01/bgp.yml
+ 1139  nano roles/build_router_config/templates/junos/bgp.j2
+ 1140  nano roles/build_router_config/tasks/build_device_config.yml
+ 1141  ansible-playbook pb_jnpr_net_build.yml
+ 1142  nano pb_jnpr_net_build.yml
+ 1143  ansible-playbook pb_jnpr_net_build.yml --tags rollback -l mxpe01
+ 1144  ansible-playbook pb_jnpr_net_build.yml --tags rollback -l mxp01
+ 1145  ansible-playbook pb_jnpr_net_build.yml --tags rollback -l mxpe02
+ 1146  ls templates/junos/
+ 1147  nano templates/junos/l3vpn.j2 
+ 1148  nano l3vpn.yml
+ 1149  nano pb_junos_l3vpn.yml
+ 1150  ansible-playbook pb_junos_l3vpn.yml
+ 1151  nano pb_jnpr_facts.yml
+ 1152  shutdown now
+ 1153  cd ansible
+ 1154  git status
+ 1155  git add .
+ 1156  git status
+ 1157  git commit -m "morning 09/01/2023"
+ 1158  history 
+ 1159  git remote add origin https://github.com/azzeddineslimani/ansible.git
+ 1160  git push --set-upstream origin master
+ 1161  pip install ansible-builder --user
+ 1162  nano execution-environment.yml
+ 1163  nano ansible.cfg
+ 1164  nano requirements.yml
+ 1165  shutdown now
+ 1166  ls
+ 1167  mkdir e_env
+ 1168  cd ansible
+ 1169  ls
+ 1170  cd ch2_ios/
+ 1171  ls
+ 1172  cd ..
+ 1173  ls
+ 1174  cd ..
+ 1175  ls
+ 1176  mv execution-environment.yml e_env/
+ 1177  cd e_env/
+ 1178  ls
+ 1179  cd ..
+ 1180  mv ansible.cfg e_env/
+ 1181  ls
+ 1182  cd e_env/
+ 1183  ls
+ 1184  nano requirements.yml
+ 1185  nano requirements.txt
+ 1186  nano requirements.yml
+ 1187  nano requirements.txt
+ 1188  nano execution-environment.yml 
+ 1189  ansible-builder build --tag=my-custom-ee --verbosity 2
+ 1190  ansible-builder
+ 1191  pip install ansible-builder
+ 1192  sudo ansible-builder build --tag=my-custom-ee --verbosity 2
+ 1193  mkdir -p  ~/venv/ansible-builder
+ 1194  python3 -m venv ~/venv/ansible-builder
+ 1195  apt install python3.8-venv
+ 1196  python3 -m venv ~/venv/ansible-builder
+ 1197  source ~/venv/ansible-builder/bin/activate
+ 1198  pip3 install ansible-builder
+ 1199  ls
+ 1200  ansible-builder build --tag=my-custom-ee --verbosity 2
+ 1201  nano execution-environment.yml 
+ 1202  ansible-builder build --tag=my-custom-ee --verbosity 3
+ 1203  ls
+ 1204  cd context/
+ 1205  ls
+ 1206  shutdown now
+ 1207  cd ansible
+ 1208  cd ch2_ios/
+ 1209  ls
+ 1210  ansible-playbook pb_build_network.yml 
+ 1211  ifconfig
+ 1212  nano hosts
+ 1213  while true; do curl 127.0.0.1;done
+ 1214  shutdown now
+ 1215  ls
+ 1216  ll
+ 1217  cd ..
+ 1218  l
+ 1219  ll
+ 1220  cd ..
+ 1221  ll
+ 1222  systemctl status  promtail
+ 1223  systemctl status  loki
+ 1224  systemctl status grafana 
+ 1225  systemctl status grafana-server 
+ 1226  shutdown now
+ 1227  systemctl status  loki
+ 1228  systemctl status  promtail
+ 1229  systemctl status grafana-server 
+ 1230  while true; do curl 127.0.0.1;done
+ 1231  shutdown now
+ 1232  sudo pip3 install pynetbox
+ 1233  ls
+ 1234  cd ansible
+ 1235  ls
+ 1236  mkdir ch4_netbox
+ 1237  cd ch4_netbox/
+ 1238  nano hosts
+ 1239  mkdir group_vars
+ 1240  nano group_vars/all.yml
+ 1241  mkdir roles
+ 1242  ls
+ 1243  mkdir roles/build_netbox_db/tasks
+ 1244  mkdir roles/build_netbox_db/
+ 1245  mkdir roles/build_netbox_db/tasks
+ 1246  nano roles/build_netbox_db/tasks/main.yaml
+ 1247  mkdir roles/build_netbox_db/defaults
+ 1248  nano roles/build_netbox_db/defaults/main.yaml
+ 1249  nano pb_build_netbox_db.yml
+ 1250  ansible-playbook pb_build_netbox_db.yml 
+ 1251  ansible-playbook pb_build_netbox_db.yml -i hosts
+ 1252  nano hosts
+ 1253  nano ansible.cfg
+ 1254  ansible-playbook pb_build_netbox_db.yml
+ 1255  nano group_vars/all.yml 
+ 1256  ansible-playbook pb_build_netbox_db.yml
+ 1257  nano roles/build_netbox_db/defaults/main.yaml
+ 1258  nano roles/build_netbox_db/tasks/main.yaml
+ 1259  ping 192.168.19.132
+ 1260  nano group_vars/all.yml 
+ 1261  curl https://192.168.19.132
+ 1262  ansible-playbook pb_build_netbox_db.yml
+ 1263  ansible-playbook pb_build_netbox_db.yml -v
+ 1264  ansible-playbook pb_build_netbox_db.yml -vV
+ 1265  ansible-playbook pb_build_netbox_db.yml -vv
+ 1266  ansible-playbook pb_build_netbox_db.yml -vvv
+ 1267  nano hosts 
+ 1268  nano pb_build_netbox_db.yml
+ 1269  nano hosts 
+ 1270  ansible-playbook pb_build_netbox_db.yml -vv
+ 1271  nano roles/build_netbox_db/tasks/main.yaml 
+ 1272  nano group_vars/
+ 1273  nano group_vars/all.yml 
+ 1274  ansible-playbook pb_build_netbox_db.yml -vv
+ 1275  nano hosts 
+ 1276  ansible-playbook pb_build_netbox_db.yml -vv
+ 1277  ansible-playbook pb_build_netbox_db.yml
+ 1278  nano hosts 
+ 1279  ansible-playbook pb_build_netbox_db.yml
+ 1280  nano group_vars/all.yml 
+ 1281  ansible-playbook pb_build_netbox_db.yml
+ 1282  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1283  nano group_vars/all.yml 
+ 1284  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1285  ansible-galaxy collection install netbox.netbox --force
+ 1286  cd ansible/ch4_netbox/
+ 1287  ls
+ 1288  ansible- 
+ 1289  ansible-playbook pb_build_netbox_db.yml 
+ 1290  sudo ufw allow 443
+ 1291  sudo ufw allow 80
+ 1292  ansible-playbook pb_build_netbox_db.yml 
+ 1293  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1294  ansible-doc netbox.netbox.netbox_device
+ 1295  curl http://192.168.19.132
+ 1296  curl https://192.168.19.132
+ 1297  ansible-galaxy collection install netbox.netbox
+ 1298  ansible-doc netbox.netbox.netbox_device
+ 1299  clear
+ 1300  cd ansible
+ 1301  cd ch4_netbox/
+ 1302  ls
+ 1303  nano group_vars/all.yml 
+ 1304  nano group_vars/all.yml
+ 1305  curl http://192.168.19.132
+ 1306  curl https://192.168.19.132
+ 1307  nano group_vars/all.yml
+ 1308  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1309  ansible-playbook pb_build_netbox_db.yml 
+ 1310  nano group_vars/all.yml
+ 1311  ansible-playbook pb_build_netbox_db.yml 
+ 1312  nano group_vars/all.yml
+ 1313  ansible-playbook pb_build_netbox_db.yml 
+ 1314  nano group_vars/all.yml
+ 1315  ansible-playbook pb_build_netbox_db.yml 
+ 1316  nano roles/build_netbox_db/tasks/main.yaml 
+ 1317  ansible-playbook pb_build_netbox_db.yml 
+ 1318  nano roles/build_netbox_db/tasks/main.yaml 
+ 1319  ansible-playbook pb_build_netbox_db.yml 
+ 1320  nano pb_build_netbox_db.yml 
+ 1321  ansible-playbook pb_build_netbox_db.yml 
+ 1322  nano pb_build_netbox_db.yml 
+ 1323  ansible-playbook pb_build_netbox_db.yml 
+ 1324  nano pb_build_netbox_db.yml 
+ 1325  nano roles/build_netbox_db/tasks/main.yaml 
+ 1326  nano pb_build_netbox_db.yml 
+ 1327  ansible-playbook pb_build_netbox_db.yml 
+ 1328  nano group_vars/all.yml 
+ 1329  nano group_vars/leaf.yml
+ 1330  nano 
+ 1331  nano roles/build_netbox_db/tasks/create_device_vendors.yml
+ 1332  nano roles/build_netbox_db/tasks/main.yaml 
+ 1333  - name: Create NetBox Device Vendors
+ 1334  nano roles/build_netbox_db/tasks/create_device_types.yml
+ 1335  nano roles/build_netbox_db/tasks/main.yaml 
+ 1336  nano roles/build_netbox_db/tasks/create_device_roles.yml
+ 1337  nano roles/build_netbox_db/tasks/main.yaml 
+ 1338  nano roles/build_netbox_db/tasks/create_device.yml
+ 1339  nano roles/build_netbox_db/tasks/main.yaml 
+ 1340  ansible-playbook pb_build_netbox_db.yml 
+ 1341  nano pb_build_netbox_db.yml 
+ 1342  ansible-playbook pb_build_netbox_db.yml 
+ 1343  nano pb_build_netbox_db.yml 
+ 1344  nano roles/build_netbox_db/tasks/main.yaml 
+ 1345  nano group_vars/all.yml 
+ 1346  ansible-playbook pb_build_netbox_db.yml 
+ 1347  nano hosts 
+ 1348  ansible-playbook pb_build_netbox_db.yml 
+ 1349  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1350  root@eve:/home/eve# sudo systemctl stop netbox
+ 1351  root@eve:/home/eve# sudo systemctl stop nginx
+ 1352  root@eve:/home/eve#
+ 1353  root@eve:/home/eve# sudo systemctl restart netbox
+ 1354  root@eve:/home/eve# sudo systemctl restart nginx
+ 1355  Job for nginx.service failed because the control process exited with error code.
+ 1356  See "systemctl status nginx.service" and "journalctl -xe" for details.
+ 1357  root@eve:/home/eve#
+ 1358  root@eve:/home/eve# sudo systemctl stop netbox
+ 1359  root@eve:/home/eve# sudo systemctl stop nginx
+ 1360  root@eve:/home/eve#
+ 1361  root@eve:/home/eve# sudo systemctl restart netbox
+ 1362  root@eve:/home/eve# sudo systemctl restart nginx
+ 1363  Job for nginx.service failed because the control process exited with error code.
+ 1364  See "systemctl status nginx.service" and "journalctl -xe" for details.
+ 1365  root@eve:/home/eve#
+ 1366  curl -k https://192.168.19.132
+ 1367  clear
+ 1368  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1369  nano group_vars/all.yml 
+ 1370  nano roles/build_netbox_db/defaults/
+ 1371  nano roles/build_netbox_db/defaults/main.yaml 
+ 1372  nano roles/build_netbox_db/tasks/main.yaml 
+ 1373  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1374  nano group_vars/all.yml 
+ 1375  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1376  nano group_vars/all.yml 
+ 1377  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1378  nano group_vars/all.yml 
+ 1379  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1380  nano group_vars/all.yml 
+ 1381  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1382  nano group_vars/all.yml 
+ 1383  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1384  ls
+ 1385  nano ansible.cfg 
+ 1386  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1387  nano group_vars/all.yml 
+ 1388  nano roles/build_netbox_db/defaults/
+ 1389  nano roles/build_netbox_db/defaults/main.yaml 
+ 1390  nano roles/build_netbox_db/tasks/
+ 1391  nano roles/build_netbox_db/tasks/main.yaml 
+ 1392  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1393  nano roles/build_netbox_db/tasks/main.yaml 
+ 1394  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1395  shutdown now
+ 1396  cd ansible
+ 1397  cd ch4_netbox/
+ 1398  ls
+ 1399  ping 192.168.19.143
+ 1400  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1401  ls
+ 1402  nano group_vars/all.yml 
+ 1403  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1404  nano group_vars/all.yml 
+ 1405  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1406  nano group_vars/all.yml 
+ 1407  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1408  nano pb_build_netbox_db.yml
+ 1409  nano roles/build_netbox_db/tasks/create_device_vendors.yml 
+ 1410  nano group_vars/all.yml 
+ 1411  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1412  nano roles/build_netbox_db/tasks/main.yaml 
+ 1413  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1414  nano group_vars/all.yml 
+ 1415  nano roles/build_netbox_db/tasks/main.yaml 
+ 1416  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1417  nano roles/build_netbox_db/tasks/create_device.yml
+ 1418  nano group_vars/all.yml 
+ 1419  nano roles/build_netbox_db/tasks/create_device.yml
+ 1420  nano roles/build_netbox_db/tasks/create_device.yml
+ 1421  nano group_vars/spine.yml 
+ 1422  nano roles/build_netbox_db/tasks/create_device_vendors.yml
+ 1423  nano roles/build_netbox_db/tasks/main.yaml 
+ 1424  nano roles/build_netbox_db/tasks/create_device.yml 
+ 1425  nano roles/build_netbox_db/tasks/main.yaml 
+ 1426  nano group_vars/arista.yml
+ 1427  ansible-playbook pb_build_netbox_db.yml
+ 1428  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1429  nano roles/build_netbox_db/tasks/main.yaml 
+ 1430  nano group_vars/leaf.yml 
+ 1431  nano group_vars/spine.yml 
+ 1432  nano group_vars/leaf.yml 
+ 1433  nano roles/build_netbox_db/tasks/create_device.yml 
+ 1434  nano roles/build_netbox_db/tasks/main.yaml 
+ 1435  cd ansible
+ 1436  ls
+ 1437  mv loki-linux-amd64.zip /home/eve/
+ 1438  git status 
+ 1439  git add .
+ 1440  git push -u origin master
+ 1441  git commit -m "17/01/2022 netbox"
+ 1442  git push -u origin master
+ 1443  shutdown now
+ 1444  nano ansible
+ 1445  cd  ansible/ch4_netbox/
+ 1446  ls
+ 1447  nano group_vars/all.yml 
+ 1448  ls
+ 1449  nano hosts 
+ 1450  nano pb_build_netbox_db.yml 
+ 1451  ls
+ 1452  cd ansible
+ 1453  cd ch4_netbox/
+ 1454  ls
+ 1455  nano hosts 
+ 1456  cd ansible/ch4_netbox/
+ 1457  nano group_vars/spine.yml 
+ 1458  ansible-playbook pb_build_netbox_db.yml 
+ 1459  nano group_vars/spine.yml 
+ 1460  cd ansible/ch4_netbox/
+ 1461  nano hosts
+ 1462  nano roles/build_netbox_db/defaults/main.yaml 
+ 1463  nano roles/build_netbox_db/tasks/main.yaml.save 
+ 1464  rm roles/build_netbox_db/tasks/main.yaml.save 
+ 1465  nano roles/build_netbox_db/tasks/create_device_vendors.yml 
+ 1466  rm roles/build_netbox_db/tasks/create_device.yml 
+ 1467  nano roles/build_netbox_db/tasks/create_device.yml 
+ 1468  nano group_vars/all.yml 
+ 1469  nano hosts
+ 1470  nano group_vars/all.yml 
+ 1471  nano group_vars/spine.yml 
+ 1472  nano roles/build_netbox_db/tasks/create_device.yml 
+ 1473  nano roles/build_netbox_db/tasks/main.yaml 
+ 1474  nano roles/build_netbox_db/tasks/create_device.yml 
+ 1475  nano roles/build_netbox_db/tasks/create_device_types.yml 
+ 1476  nano roles/build_netbox_db/tasks/create_device.yml 
+ 1477  nano hosts
+ 1478  nano group_vars/all.yml 
+ 1479  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1480  ls
+ 1481  cd e_env/
+ 1482  ls
+ 1483  docker --version
+ 1484  history 
+ 1485  history | grep builder
+ 1486  llnano context/Dockerfile 
+ 1487  nano context/Dockerfile 
+ 1488  history > commands.txt
+ 1489  cd ..
+ 1490  cp e_env/ ansible
+ 1491  cp -r e_env/ ansible
+ 1492  cd ansible
+ 1493  ls
+ 1494  git add .
+ 1495  git commit -m "17/01/2022 Execution env AWX IOS_support"
+ 1496  git push -u origin master
+ 1497  git status
+ 1498  cd ch4_netbox/
+ 1499  ls
+ 1500  nana ansible.cfg 
+ 1501  nano ansible.cfg 
+ 1502  ls
+ 1503  nano group_vars/all.yml 
+ 1504  nano group_vars/spine.yml 
+ 1505  ansible-playbook pb_build_netbox_db.yml 
+ 1506  nano roles/build_netbox_db/tasks/create_device.yml
+ 1507  ansible-playbook pb_build_netbox_db.yml 
+ 1508  nano group_vars/spine.yml 
+ 1509  nano roles/build_netbox_db/defaults/
+ 1510  nano roles/build_netbox_db/defaults/main.yaml 
+ 1511  nano roles/build_netbox_db/tasks/main.yaml
+ 1512  nano roles/build_netbox_db/tasks/create_device.yml
+ 1513  ansible-playbook pb_build_netbox_db.yml 
+ 1514  nano pb_build_netbox_db.yml 
+ 1515  *
+ 1516  nano pb_build_netbox_db.yml 
+ 1517  nano hosts 
+ 1518  ansible-playbook pb_build_netbox_db.yml 
+ 1519  nano hosts 
+ 1520  ansible-playbook pb_build_netbox_db.yml 
+ 1521  nano hosts 
+ 1522  ansible-playbook pb_build_netbox_db.yml 
+ 1523  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1524  nano hosts 
+ 1525  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1526  nano hosts 
+ 1527  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1528  ls
+ 1529  nano hosts 
+ 1530  nano roles/build_netbox_db/tasks/create_device.yml
+ 1531  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1532  python
+ 1533  python3
+ 1534  nano roles/build_netbox_db/tasks/create_device.yml
+ 1535  nano hosts 
+ 1536  nano roles/build_netbox_db/tasks/main.yaml 
+ 1537  nano roles/build_netbox_db/tasks/create_device.yml
+ 1538  nano roles/build_netbox_db/tasks/create_device_types.yml 
+ 1539  nano group_vars/all.yml 
+ 1540  nano roles/build_netbox_db/tasks/create_device_intf.yml
+ 1541  nano roles/build_netbox_db/tasks/main.yaml 
+ 1542  ansible-playbook pb_build_netbox_db.yml 
+ 1543  nano roles/build_netbox_db/tasks/create_device_intf.yml
+ 1544  ansible-playbook pb_build_netbox_db.yml 
+ 1545  ansible-playbook pb_build_netbox_db.yml netbox.netbox.netbox_interface
+ 1546  nano roles/build_netbox_db/tasks/create_device_intf.yml
+ 1547  ansible-playbook pb_build_netbox_db.yml 
+ 1548  nano roles/build_netbox_db/tasks/create_device_intf.yml
+ 1549  ansible-playbook pb_build_netbox_db.yml 
+ 1550  nano roles/build_netbox_db/tasks/create_device_intf.yml
+ 1551  ansible-playbook pb_build_netbox_db.yml 
+ 1552  nano group_vars/all.yml 
+ 1553  ansible-playbook pb_build_netbox_db.yml 
+ 1554  nano group_vars/all.yml 
+ 1555  ansible-playbook pb_build_netbox_db.yml 
+ 1556  nano roles/build_netbox_db/tasks/create_device_intf.yml
+ 1557  ansible-playbook pb_build_netbox_db.yml 
+ 1558  nano group_vars/all.yml 
+ 1559  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1560  nano roles/build_netbox_db/tasks/main.yaml 
+ 1561  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1562  ansible-playbook pb_build_netbox_db.yml 
+ 1563  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1564  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1565  Loopback0
+ 1566  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1567  nano roles/build_netbox_db/tasks/create_device_intf_.yml
+ 1568  nano roles/build_netbox_db/tasks/create_device_intf.yml
+ 1569  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1570  ansible-playbook pb_build_netbox_db.yml
+ 1571  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1572  nano roles/build_netbox_db/tasks/create_device_intf.yml
+ 1573  ansible-playbook pb_build_netbox_db.yml
+ 1574  nano roles/build_netbox_db/tasks/create_device_intf.yml
+ 1575  ansible-playbook pb_build_netbox_db.yml
+ 1576  nano roles/build_netbox_db/tasks/create_device_intf.yml
+ 1577  ansible-playbook pb_build_netbox_db.yml
+ 1578  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1579  nano roles/build_netbox_db/tasks/main.yaml 
+ 1580  nano hosts 
+ 1581  nano group_vars/all.yml 
+ 1582  ansible-playbook pb_build_netbox_db.yml
+ 1583  nano roles/build_netbox_db/tasks/main.yaml 
+ 1584  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1585  ansible-playbook pb_build_netbox_db.yml
+ 1586  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1587  nano roles/build_netbox_db/tasks/main.yaml 
+ 1588  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1589  nano roles/build_netbox_db/tasks/create_device_intf.yml
+ 1590  ansible-playbook pb_build_netbox_db.yml
+ 1591  nano group_vars/all.yml 
+ 1592  ansible-playbook pb_build_netbox_db.yml
+ 1593  nano roles/build_netbox_db/tasks/create_device_intf.yml
+ 1594  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1595  nano roles/build_netbox_db/tasks/create_device_intf.yml
+ 1596  ansible-playbook pb_build_netbox_db.yml
+ 1597  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1598  ansible-playbook pb_build_netbox_db.yml
+ 1599  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1600  ansible-playbook pb_build_netbox_db.yml
+ 1601  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1602  ansible-playbook pb_build_netbox_db.yml
+ 1603  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1604  ansible-playbook pb_build_netbox_db.yml
+ 1605  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1606  ansible-playbook pb_build_netbox_db.yml
+ 1607  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1608  ansible-playbook pb_build_netbox_db.yml
+ 1609  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1610  ansible-playbook pb_build_netbox_db.yml
+ 1611  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1612  ansible-playbook pb_build_netbox_db.yml
+ 1613  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1614  ansible-playbook pb_build_netbox_db.yml -vvvv
+ 1615  nano group_vars/all.yml 
+ 1616  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1617  ansible-playbook pb_build_netbox_db.yml
+ 1618  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml
+ 1619  cd ..
+ 1620  git add .
+ 1621  git commit -m "Added documentation" 
+ 1622  git push origin master
+ 1623  shutdown now
+ 1624  cd ansible
+ 1625  cd netbox_dynamic_inventory
+ 1626  mkdir netbox_dynamic_inventory
+ 1627  nano netbox_dynamic_inventory/netbox_inventory_source.yml
+ 1628  mv -r netbox_dynamic_inventory/ ch4_netbox/
+ 1629  mv netbox_dynamic_inventory/ ch4_netbox/
+ 1630  ls
+ 1631  cd ch4_netbox/
+ 1632  ls
+ 1633  nano netbox_dynamic_inventory/netbox_inventory_source.yml
+ 1634  nano netbox_dynamic_inventory/pb_create_report.yml
+ 1635  ansible-playbook netbox_dynamic_inventory/pb_create_report.yml
+ 1636  cd netbox_dynamic_inventory/
+ 1637  ansible-playbook pb_create_report.yml
+ 1638  ls
+ 1639  nano netbox_inventory_source.yml 
+ 1640  ansible-inventory --list -i netbox_inventory_source.yml
+ 1641  nano netbox_inventory_source.yml 
+ 1642  ansible-inventory --list -i netbox_inventory_source.yml
+ 1643  pip3 install pytz
+ 1644  ansible-inventory --list -i netbox_inventory_source.yml
+ 1645  nano remarque.txt
+ 1646  shutdown 
+ 1647  shutdown now
+ 1648  cd ansible
+ 1649  ls
+ 1650  cd ch4_netbox/
+ 1651  ls
+ 1652  cd netbox_dynamic_inventory/
+ 1653  ansible-inventory --list -i netbox_inventory_source.yml
+ 1654  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1655  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml -vvvv
+ 1656  nano pb_create_report.yml 
+ 1657  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1658  nano pb_create_report.yml 
+ 1659  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1660  ls
+ 1661  nano netbox_inventory_source.yml 
+ 1662  ansible-inventory --list -i netbox_inventory_source.yml > a.yml
+ 1663  nano a.yml 
+ 1664  nano netbox_inventory_source.yml 
+ 1665  cd .;
+ 1666  cd ..
+ 1667  ls
+ 1668  nano hosts 
+ 1669  cd netbox_dynamic_inventory/
+ 1670  nano pb_create_report.yml 
+ 1671  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1672  nano pb_create_report.yml 
+ 1673  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1674  nano pb_create_report.yml 
+ 1675  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1676  nano pb_create_report.yml 
+ 1677  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1678  nano a.yml 
+ 1679  nano netbox_inventory_source.yml 
+ 1680  ansible-inventory --list -i netbox_inventory_source.yml > a.yml
+ 1681  nano a.yml 
+ 1682  nano netbox_inventory_source.yml 
+ 1683  ansible-inventory --list -i netbox_inventory_source.yml > a.yml
+ 1684  nano a.yml 
+ 1685  nano netbox_inventory_source.yml 
+ 1686  nano a.yml 
+ 1687  nano netbox_inventory_source.yml 
+ 1688  ansible-inventory --list -i netbox_inventory_source.yml > a.yml
+ 1689  nano a.yml 
+ 1690  nano netbox_inventory_source.yml 
+ 1691  ansible-inventory --list -i netbox_inventory_source.yml > a.yml
+ 1692  nano a.yml 
+ 1693  nano netbox_inventory_source.yml 
+ 1694  ansible-inventory --list -i netbox_inventory_source.yml > a.yml
+ 1695  nano a.yml 
+ 1696  nano netbox_inventory_source.yml 
+ 1697  ansible-inventory --list -i netbox_inventory_source.yml > a.yml
+ 1698  nano a.yml 
+ 1699  nano netbox_inventory_source.yml 
+ 1700  ansible-inventory --list -i netbox_inventory_source.yml > a.yml
+ 1701  nano a.yml 
+ 1702  nano netbox_inventory_source.yml 
+ 1703  ansible-inventory --list -i netbox_inventory_source.yml > a.yml
+ 1704  nano a.yml 
+ 1705  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1706  nano pb_create_report.yml 
+ 1707  shutdown now
+ 1708  ls
+ 1709  cd ansible/ch4_netbox/
+ 1710  ls
+ 1711  nano pb_create_report.yml 
+ 1712  nano netbox_inventory_source.yml 
+ 1713  nano pb_create_report.yml 
+ 1714  ls
+ 1715  cd  netbox_dynamic_inventory/
+ 1716  ls
+ 1717  nano netbox_inventory_source.yml 
+ 1718  nano a.yml 
+ 1719  nano pb_create_report.yml 
+ 1720  ansible-inventory --list -i netbox_inventory_source.yml > a.yml
+ 1721  nano a.yml 
+ 1722  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1723  nano pb_create_report.yml 
+ 1724  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1725  nano pb_create_report.yml 
+ 1726  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1727  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml -vvvv
+ 1728  nano pb_create_report.yml 
+ 1729  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml -vvvv
+ 1730  nano pb_create_report.yml 
+ 1731  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml -vvvv
+ 1732  nano pb_create_report.yml 
+ 1733  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml -vvvv
+ 1734  nano pb_create_report.yml 
+ 1735  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml -vvvv
+ 1736  nano pb_create_report.yml 
+ 1737  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml -vvvv
+ 1738  nano pb_create_report.yml 
+ 1739  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml -vvvv
+ 1740  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1741  ll
+ 1742  nano netbox_report.yaml 
+ 1743  nano pb_create_report.yml 
+ 1744  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1745  nano netbox_report.yaml 
+ 1746  nano pb_create_report.yml 
+ 1747  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1748  nano pb_create_report.yml 
+ 1749  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1750  nano pb_create_report.yml 
+ 1751  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1752  nano pb_create_report.yml 
+ 1753  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1754  nano netbox_report.yaml 
+ 1755  nano pb_create_report.yml 
+ 1756  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1757  nano pb_create_report.yml 
+ 1758  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1759  nano pb_create_report.yml 
+ 1760  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1761  nano pb_create_report.yml 
+ 1762  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1763  nano netbox_report.yaml 
+ 1764  nano pb_create_report.yml 
+ 1765  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1766  nano netbox_report.yaml 
+ 1767  nano pb_create_report.yml 
+ 1768  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1769  nano pb_create_report.yml 
+ 1770  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1771  nano netbox_report.yaml 
+ 1772  rm netbox_report.yaml 
+ 1773  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1774  nano netbox_report.yaml 
+ 1775  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml -vvvv
+ 1776  nano netbox_report.yaml 
+ 1777  nano pb_create_report.yml 
+ 1778  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml -vvvv
+ 1779  nano pb_create_report.yml 
+ 1780  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1781  nano netbox_report.yaml 
+ 1782  nano pb_create_report.yml 
+ 1783  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1784  nano pb_create_report.yml 
+ 1785  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1786  nano netbox_report.yaml 
+ 1787  nano pb_create_report.yml 
+ 1788  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1789  nano netbox_report.yaml 
+ 1790  nano pb_create_report.yml 
+ 1791  cd ..
+ 1792  ls
+ 1793  curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
+ 1794  ls
+ 1795  sudo mv kustomize /usr/local/bin
+ 1796  ls
+ 1797  kustomize --help
+ 1798  cd ansible
+ 1799  ls
+ 1800  mkdir kubernetes_awx
+ 1801  cd kubernetes_awx/
+ 1802  wget https://raw.githubusercontent.com/rancher/local-path-provisioner/v0.0.19/deploy/local-path-storage.yaml -O /root/local-path-storage.yaml
+ 1803  ls
+ 1804  mv /root/local-path-storage.yaml ~/
+ 1805  mv /root/local-path-storage.yaml /home/eve/ansible 
+ 1806  mv /root/local-path-storage.yaml /home/eve/ansible/kubernetes_awx/
+ 1807  ls
+ 1808  nano local-path-storage.yaml 
+ 1809  shutdown now
+ 1810  ls
+ 1811  cd ansible
+ 1812  ls
+ 1813  git add .
+ 1814  git commit -m "23/01/2023"
+ 1815  apt install
+ 1816  git push origin master
+ 1817  shutdown now
+ 1818  ls
+ 1819  cd e_env/
+ 1820  ls
+ 1821  ll
+ 1822  shutdown now
+ 1823  ls
+ 1824  cd ansible
+ 1825  cd ch4_netbox/
+ 1826  lq
+ 1827  ls
+ 1828  nano ansible.cfg 
+ 1829  history 
+ 1830  history [ grep pip
+ 1831  history | grep pip
+ 1832  pynetbox --version
+ 1833  pynetbox
+ 1834  pip --h
+ 1835  history | grep pip
+ 1836  ls
+ 1837  nano hosts 
+ 1838  nano group_vars/all.yml 
+ 1839  ls
+ 1840  nano pb_build_netbox_db.yml 
+ 1841  nano roles/build_netbox_db/defaults/main.yaml 
+ 1842  history | grep pip
+ 1843  history 
+ 1844  cd netbox_dynamic_inventory/
+ 1845  ansible-inventory                                                          --list -i netbox_inventory_source.yml
+ 1846  nano netbox_inventory_source.yml
+ 1847  ansible-inventory                                                          --list -i netbox_inventory_source.yml
+ 1848  nano netbox_inventory_source.yml
+ 1849  history
+ 1850  pip3 delete pytz
+ 1851  pip3 unistall pytz
+ 1852  pip3 uninstall pytz
+ 1853  ansible-inventory                                                          --list -i netbox_inventory_source.yml
+ 1854  pip3 install pytz
+ 1855  ansible-inventory                                                          --list -i netbox_inventory_source.yml
+ 1856  nano /home/eve/ansible/e_env/
+ 1857  nano /home/eve/ansible/e_env/requirements.txt 
+ 1858  cd .
+ 1859  cd ..
+ 1860  git add .
+ 1861  cd kubernetes_awx/
+ 1862  ls
+ 1863  nano Master_node_kuberntes.sh
+ 1864  nano Worker_node_kuberntes.sh
+ 1865  ls
+ 1866  cd ..
+ 1867  cp /home/eve/awx/base/ /home/eve/ansible/kubernetes_awx/
+ 1868  cp -r /home/eve/awx/base/ /home/eve/ansible/kubernetes_awx/
+ 1869  cp -r /home/eve/awx/kustomize/ /home/eve/ansible/kubernetes_awx/
+ 1870  ls
+ 1871  git add .
+ 1872  git commit -m "25/01/2023" 
+ 1873  git push origin master
+ 1874  shutdown now
+ 1875  cd ansible/ch4_netbox/
+ 1876  ls
+ 1877  cd netbox_dynamic_inventory/
+ 1878  ls
+ 1879  nano netbox_report.yaml 
+ 1880  ansible-playbook pb_create_report.yml 
+ 1881  history 
+ 1882  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1883  ls
+ 1884  rm netbox_report.yaml 
+ 1885  ls
+ 1886  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1887  ls
+ 1888  nano netbox_report.yaml 
+ 1889  nano pb_create_report.yml 
+ 1890  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml -vvvvv
+ 1891  nano /root/.ansible/tmp/ansible-tmp-1674734097.4033666-6436-273064254994723
+ 1892  nano /root/.ansible/tmp/ansible-tmp-1674054601.2180333-115521-49517137113924/AnsiballZ_netbox_site.py 
+ 1893  nano /root/.ansible/tmp/netbox_api_dump.json 
+ 1894  nano netbox_report.yaml 
+ 1895  nano pb_create_report.yml 
+ 1896  cd ansible/ch4_netbox/
+ 1897  cd netbox_dynamic_inventory/
+ 1898  ls
+ 1899  nano pb_create_report.yml
+ 1900  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1901  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml --vv
+ 1902  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml -vvvvv
+ 1903  nano pb_create_report.yml
+ 1904  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml -vvvvv
+ 1905  nano netbox_report.yaml 
+ 1906  rm netbox_report.yaml 
+ 1907  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml -vvvvv
+ 1908  nano netbox_report.yaml 
+ 1909  nano pb_create_report.yml
+ 1910  rm netbox_report.yaml 
+ 1911  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml -vvvvv
+ 1912  nano netbox_report.yaml 
+ 1913  nano pb_create_report.yml
+ 1914  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml -vvvvv
+ 1915  nano netbox_report.yaml 
+ 1916  nano pb_create_report.yml
+ 1917  nano netbox_data.yml
+ 1918  nano pb_build_config.yml
+ 1919  cd ansible/ch4_netbox/netbox_dynamic_inventory/
+ 1920  ls
+ 1921  nano netbox_report.yaml 
+ 1922  nano pb_create_report.yml
+ 1923  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1924  nano netbox_report.yaml 
+ 1925  nano pb_create_report.yml
+ 1926  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1927  nano netbox_report.yaml 
+ 1928  rm netbox_report.yaml 
+ 1929  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1930  nano netbox_report.yaml 
+ 1931  nano pb_create_report.yml
+ 1932  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1933  nano netbox_report.yaml 
+ 1934  nano pb_create_report.yml
+ 1935  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1936  nano netbox_report.yaml 
+ 1937  nano pb_create_report.yml
+ 1938  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1939  nano pb_create_report.yml
+ 1940  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1941  nano pb_create_report.yml
+ 1942  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1943  nano pb_create_report.yml
+ 1944  nano netbox_report.yaml 
+ 1945  nano pb_create_report.yml
+ 1946  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1947  nano pb_create_report.yml
+ 1948  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1949  nano netbox_report.yaml 
+ 1950  nano pb_create_report.yml
+ 1951  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1952  nano netbox_report.yaml 
+ 1953  nano pb_create_report.yml
+ 1954  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1955  nano netbox_report.yaml 
+ 1956  nano pb_create_report.yml
+ 1957  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1958  nano netbox_report.yaml 
+ 1959  nano pb_create_report.yml
+ 1960  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1961  nano netbox_report.yaml 
+ 1962  nano pb_create_report.yml
+ 1963  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1964  nano pb_create_report.yml
+ 1965  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1966  nano pb_create_report.yml
+ 1967  ansible-playbook pb_create_report.yml -i netbox_inventory_source.yml
+ 1968  nano netbox_report.yaml 
+ 1969  nano pb_create_report.yml
+ 1970  ls
+ 1971  rm pb_create_report.yml.save 
+ 1972  nano pb_build_config.yml
+ 1973  ansible-playbook pb_build_config.yml -i netbox_inventory_source.yml
+ 1974  ansible-playbook pb_build_config.yml -i netbox_inventory_source.yml -vvvv
+ 1975  nano pb_build_config.yml
+ 1976  cd ..
+ 1977  cd ch4_netbox/
+ 1978  ls
+ 1979  nano roles/build_netbox_db/tasks/create_device.yml 
+ 1980  nano roles/build_netbox_db/tasks/create_device_intf.yml 
+ 1981  nano roles/build_netbox_db/tasks/create_device_intf_ip.yml 
+ 1982  nano roles/build_netbox_db/tasks/create_device_vendors.yml 
+ 1983  cd ..
+ 1984  git add .
+ 1985  cd ansible
+ 1986  git add .
+ 1987  cd ..
+ 1988  ls
+ 1989  cd ansible
+ 1990  git commit -m "26/01/2023"
+ 1991  git push origin master
+ 1992  cd ansible
+ 1993  git push origin master
+ 1994  shutdown now
+ 1995  ping 192.168.198.147
+ 1996  cd ansible
+ 1997  ls
+ 1998  mkdir ch5_dell
+ 1999  cd ch5_dell/
+ 2000  nano hosts
+ 2001  nano [access]
+ 2002  nano hosts
+ 2003  nano ansible.cfg
+ 2004  ansible all -m ping
+ 2005  ssh 192.168.198.147
+ 2006  nano /root/.ssh/known_hosts
+ 2007  ssh 192.168.198.147
+ 2008  nano /etc/ssh/ssh_config.d/weak.conf
+ 2009  ssh admin@192.168.198.147
+ 2010  nano ~/.ssh/config
+ 2011  nano /etc/ssh/ssh_config
+ 2012  nano ~/.ssh/config
+ 2013  ssh admin@192.168.198.147
+ 2014  ansible all -m ping
+ 2015  nano ping.yaml
+ 2016  ansible-playbook ping.yaml 
+ 2017  nano ping.yaml
+ 2018  ansible-playbook ping.yaml 
+ 2019* ansible all -m ping 
+ 2020  nano ping.yaml
+ 2021  ansible-playbook ping.yaml 
+ 2022  ansible-galaxy collection list
+ 2023  nano ping.yaml
+ 2024  ansible-playbook ping.yaml 
+ 2025  ansible-playbook ping.yaml -vvv
+ 2026  nano ping.yaml
+ 2027  ansible-playbook ping.yaml 
+ 2028  nano ping.yaml
+ 2029  ansible-playbook ping.yaml connection=ansible.netcommon.network_cli
+ 2030  ansible-playbook ping.yaml connection ansible.netcommon.network_cli
+ 2031  ansible-playbook ping.yaml connection network_cli
+ 2032  ansible-playbook ping.yaml --connection network_cli
+ 2033  history > commands.txt

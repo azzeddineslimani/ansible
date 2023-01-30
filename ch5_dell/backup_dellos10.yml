@@ -1,0 +1,14 @@
+---
+- name: Backup DNOS10
+  hosts: access01
+  gather_facts: false
+  vars:
+    backup_dir: "/home/eve/backup"
+  collections:
+    - dellemc.os10
+  tasks:
+    - name: Backup
+      os10_config:
+        backup: true
+        backup_options:
+          dir_path: "{{ backup_dir }}"

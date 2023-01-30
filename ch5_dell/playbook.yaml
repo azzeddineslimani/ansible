@@ -1,0 +1,6 @@
+- hosts: access01
+  connection: network_cli
+  roles:
+    - dell-networking.dellos-logging
+    - dell-networking.dellos-users
+    - dell-networking.dellos-ntp

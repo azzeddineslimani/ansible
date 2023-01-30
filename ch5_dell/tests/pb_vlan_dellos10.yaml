@@ -1,0 +1,7 @@
+---
+- hosts: access01
+  connection: network_cli
+  collections:
+    - dellemc.os10
+  roles:
+    - os10_vlan
