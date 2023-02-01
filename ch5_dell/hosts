@@ -1,5 +1,6 @@
 [access]
-access01    ansible_host=192.168.198.147 ansible_user=admin ansible_ssh_pass=admin ansible_network_os=dellemc.os10.os10
+access01    ansible_host=192.168.198.147 ansible_user=admin ansible_ssh_pass=admin 
+#ansible_network_os=dellos10
 [access:vars]
 ansible_user=luca
 ansible_password=mysecretpassword123

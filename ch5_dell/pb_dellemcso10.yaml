@@ -63,13 +63,21 @@
     - name: vlan 100
       dellemc.os10.os10_config:
         lines: ['virtual-network 100']
+
+
+    - name: no shut
+      dellemc.os10.os10_config:
+        lines: ['no shutdown']
+        parents: ['interface ethernet1/1/1']
+#        before: ['no interface ethernet1/1/1']
+
     - name: switchport
       dellemc.os10.os10_config:
         lines: ['switchport mode trunk']
         parents: ['interface ethernet1/1/1']
-        before: ['no interface ethernet1/1/1']
+#        before: ['no interface ethernet1/1/1']
     - name: eth1/1/1 to VLAN 100      
       dellemc.os10.os10_config:
         lines: ['member-interface ethernet1/1/1 vlan-tag 100']
         parents: ['virtual-network 100']
-        before: ['no virtual-network 100']
+#        before: ['no virtual-network 100']
